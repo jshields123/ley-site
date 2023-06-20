@@ -1,0 +1,18 @@
+.navbar {
+}
+
+.navbar_list {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: space-evenly;
+}
+
+.navbar_item {
+  margin-right: 10px;
+}
+
+.navbar_item:last-child {
+  margin-right: 0;
+}
