@@ -3,7 +3,13 @@ import Image from "next/image";
 const HeroImage = () => {
   return (
     <>
-      <Image src={"/lauren.jpeg"} alt="hero" width={500} height={500} />
+      <Image
+        src={"/lauren.jpeg"}
+        alt="hero"
+        width={500}
+        height={500}
+        priority={true}
+      />
     </>
   );
 };

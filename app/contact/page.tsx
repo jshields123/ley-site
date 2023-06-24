@@ -1,6 +1,6 @@
-import styles from "../app/page.module.css";
-import Layout from "../app/layout";
-import NavBar from "../app/components/NavBar/NavBar";
+import Layout from "../layout";
+import NavBar from "../components/NavBar/NavBar";
+import styles from "../page.module.css";
 
 export default function Contact() {
   return (
