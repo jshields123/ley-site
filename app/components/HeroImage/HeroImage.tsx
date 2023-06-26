@@ -1,4 +1,4 @@
-import styles from "../components/HeroImage.module.css";
+import styles from "./HeroImage.module.css";
 import Image from "next/image";
 const HeroImage = () => {
   return (
@@ -6,9 +6,9 @@ const HeroImage = () => {
       <Image
         src={"/lauren.jpeg"}
         alt="hero"
-        width={500}
-        height={500}
         priority={true}
+        width={700}
+        height={500}
       />
     </>
   );

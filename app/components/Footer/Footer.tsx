@@ -1,7 +1,9 @@
+import styles from "./Footer.module.css";
+
 const Footer = () => {
   return (
     <footer>
-      <div className="container">
+      <div className={styles.footer__text}>
         <p>&copy; 2023 LEY Website. All rights reserved.</p>
       </div>
     </footer>

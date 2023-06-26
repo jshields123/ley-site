@@ -7,7 +7,7 @@ interface TitleProps {
 const Title = ({ text }: TitleProps) => {
   return (
     <div className={styles.title__container}>
-      <h1 className={styles.title__text}>{text}</h1>
+      <h2 className={styles.title__text}>{text}</h2>
     </div>
   );
 };

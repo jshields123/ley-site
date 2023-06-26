@@ -6,6 +6,7 @@ import { Title } from "./components";
 import { HeroImage } from "./components";
 import { Header } from "./components";
 import { Footer } from "./components";
+import { ImageOverlay } from "./components";
 
 export default function Home() {
   return (
@@ -13,8 +14,7 @@ export default function Home() {
       <Header />
       <main className={styles.main}>
         <div className={styles.intro__container}>
-          <HeroImage />
-          <Title text="LEY Consulting" />
+          <ImageOverlay />
           <IntroText />
         </div>
       </main>

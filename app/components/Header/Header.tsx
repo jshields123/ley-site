@@ -1,11 +1,11 @@
+import { Logo } from "../Logo/Logo";
 import { NavBar } from "../NavBar";
-import { Title } from "../Title";
 import styles from "./Header.module.css";
 
 const Header = () => {
   return (
     <div className={styles.header}>
-      <Title text="LEY" />
+      <Logo />
       <NavBar />
     </div>
   );

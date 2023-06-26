@@ -1,0 +1,11 @@
+.logo_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
