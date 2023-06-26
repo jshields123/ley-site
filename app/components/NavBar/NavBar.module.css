@@ -27,3 +27,9 @@
 .navbar_logo {
   flex: 0 0 auto;
 }
+
+.links {
+  color: black;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
