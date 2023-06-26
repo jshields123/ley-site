@@ -1,10 +1,14 @@
-import styles from "../components/Title.module.css";
+import styles from "./Title.module.css";
 
-const Title = () => {
+interface TitleProps {
+  text: string;
+}
+
+const Title = ({ text }: TitleProps) => {
   return (
-    <>
-      <h1>LEY Consulting</h1>
-    </>
+    <div className={styles.title__container}>
+      <h1 className={styles.title__text}>{text}</h1>
+    </div>
   );
 };
 

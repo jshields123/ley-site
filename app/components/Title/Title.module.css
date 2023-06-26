@@ -1,0 +1,15 @@
+.title__container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.title__text {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 945px) {
+  .title__text {
+    margin-left: 1rem;
+  }
+}

@@ -12,9 +12,9 @@ export default function Home() {
     <Layout>
       <Header />
       <main className={styles.main}>
-        <div>
+        <div className={styles.intro__container}>
           <HeroImage />
-          <Title />
+          <Title text="LEY Consulting" />
           <IntroText />
         </div>
       </main>

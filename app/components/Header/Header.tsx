@@ -5,7 +5,7 @@ import styles from "./Header.module.css";
 const Header = () => {
   return (
     <div className={styles.header}>
-      <Title />
+      <Title text="LEY" />
       <NavBar />
     </div>
   );
