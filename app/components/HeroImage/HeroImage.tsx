@@ -14,4 +14,4 @@ const HeroImage = () => {
   );
 };
 
-export default HeroImage;
+export { HeroImage };

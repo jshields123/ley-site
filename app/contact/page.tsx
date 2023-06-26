@@ -1,16 +1,18 @@
 import Layout from "../layout";
-import NavBar from "../components/NavBar/NavBar";
 import styles from "../page.module.css";
+import { Header } from "../components";
+import { Footer } from "../components";
 
 export default function Contact() {
   return (
     <Layout>
-      <NavBar />
+      <Header />
       <main className={styles.main}>
         <div>
           <h1>Contact Us</h1>
         </div>
       </main>
+      <Footer />
     </Layout>
   );
 }

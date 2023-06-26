@@ -12,11 +12,11 @@ const NavBar = () => {
           <Link href="/about">About</Link>
         </li>
         <li className={styles.navbar_item}>
-          <Link href="/contact">Contact Us</Link>
+          <Link href="/contact">Contact</Link>
         </li>
       </ul>
     </nav>
   );
 };
 
-export default NavBar;
+export { NavBar };

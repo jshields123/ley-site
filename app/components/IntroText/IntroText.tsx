@@ -13,4 +13,4 @@ const IntroText = () => {
   );
 };
 
-export default IntroText;
+export { IntroText };

@@ -1,10 +1,11 @@
 import styles from "./page.module.css";
 import Layout from "./layout";
-import Header from "./components/Header/Header";
-import IntroText from "./components/IntroText/IntroText";
-import Title from "./components/Title/Title";
-import HeroImage from "./components/HeroImage/HeroImage";
-import Footer from "./components/Footer/Footer";
+
+import { IntroText } from "./components";
+import { Title } from "./components";
+import { HeroImage } from "./components";
+import { Header } from "./components";
+import { Footer } from "./components";
 
 export default function Home() {
   return (

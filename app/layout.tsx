@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 import { Inter } from "next/font/google";
+import { Footer } from "./components";
+import { Header } from "./components";
 
 const inter = Inter({ subsets: ["latin"] });
 
