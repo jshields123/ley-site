@@ -1,6 +1,5 @@
 import styles from "./page.module.css";
 import Layout from "./layout";
-
 import { Footer } from "./components";
 import { ImageOverlay } from "./components";
 
