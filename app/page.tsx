@@ -1,21 +1,16 @@
 import styles from "./page.module.css";
 import Layout from "./layout";
-
-import { IntroText } from "./components";
-import { Title } from "./components";
-import { HeroImage } from "./components";
-import { Header } from "./components";
 import { Footer } from "./components";
-import { ImageOverlay } from "./components";
+import { IntroSection } from "./components/IntroSection/IntroSection";
+import { AboutSection } from "./components/AboutSection/AboutSection";
 
 export default function Home() {
   return (
     <Layout>
-      <Header />
       <main className={styles.main}>
-        <div className={styles.intro__container}>
-          <ImageOverlay />
-          <IntroText />
+        <IntroSection />
+        <div className={styles.about__container}>
+          <AboutSection />
         </div>
       </main>
       <Footer />

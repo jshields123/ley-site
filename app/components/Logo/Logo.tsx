@@ -1,4 +1,3 @@
-import { Title } from "../Title/Title";
 import styles from "./Logo.module.css";
 
 const Logo = () => {

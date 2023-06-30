@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import { Inter } from "next/font/google";
-import { Footer } from "./components";
-import { Header } from "./components";
+import styles from "./layout.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,8 +11,7 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <html lang="en">
-      <head></head>
-      <body>{children}</body>
+      <body className={styles.layout}>{children}</body>
     </html>
   );
 };
