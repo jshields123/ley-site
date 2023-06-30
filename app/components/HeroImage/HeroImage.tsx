@@ -2,15 +2,14 @@ import styles from "./HeroImage.module.css";
 import Image from "next/image";
 const HeroImage = () => {
   return (
-    <>
+    <div className={styles.hero}>
       <Image
         src={"/lauren.jpeg"}
-        alt="hero"
-        priority={true}
-        width={700}
-        height={500}
+        alt="Lauren"
+        fill
+        className={styles.hero__image}
       />
-    </>
+    </div>
   );
 };
 
