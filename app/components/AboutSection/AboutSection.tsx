@@ -1,17 +1,21 @@
-import styles from "../IntroText/IntroText.module.css";
-import Image from "next/image";
+import { TextCard, ImageCard } from "../Cards";
+import styles from "./AboutSection.module.css";
 
 const AboutSection = () => {
   return (
     <div className={styles.about_container__wrapper}>
-      <div className={styles.about_image}>{/* <Image /> */}</div>
-      <div className={styles.about_container__text}>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,
-          officia iure saepe voluptatem temporibus, praesentium ad unde possimus
-          quis earum aspernatur, alias dolorem? Reprehenderit dolorum laudantium
-          fuga expedita, ducimus impedit?
-        </p>
+      <div className={styles.text}>
+        <TextCard
+          text={
+            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,officia iure saepe voluptatem temporibus, praesentium ad unde possimusquis earum aspernatur, alias dolorem? Reprehenderit dolorum laudantiumfuga expedita, ducimus impedit?"
+          }
+        />
+      </div>
+      <div className={styles.about_image}>
+        <ImageCard
+          imageSrc={"/lauren-linkedin2.jpeg"}
+          imageAlt={"Lauren at work"}
+        />
       </div>
     </div>
   );
