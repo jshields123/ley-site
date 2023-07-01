@@ -1,0 +1,5 @@
+.about_container__wrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+}
