@@ -10,7 +10,9 @@ interface ImageCardProps {
 const ImageCard = ({ imageSrc, imageAlt }: ImageCardProps) => {
   return (
     <Card>
-      <Image src={imageSrc} alt={imageAlt} width={200} height={200} />
+      <div className={styles.image__container}>
+        <Image src={imageSrc} alt={imageAlt} width={150} height={150} />
+      </div>
     </Card>
   );
 };
