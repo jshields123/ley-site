@@ -11,7 +11,7 @@ const ImageCard = ({ imageSrc, imageAlt }: ImageCardProps) => {
   return (
     <Card>
       <div className={styles.image__container}>
-        <Image src={imageSrc} alt={imageAlt} width={150} height={150} />
+        <Image src={imageSrc} alt={imageAlt} fill />
       </div>
     </Card>
   );

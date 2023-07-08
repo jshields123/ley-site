@@ -8,7 +8,9 @@ interface TextCardProps {
 const TextCard = ({ text }: TextCardProps) => {
   return (
     <Card>
-      <p>{text}</p>
+      <div className={styles.image__container}>
+        <p>{text}</p>
+      </div>
     </Card>
   );
 };
