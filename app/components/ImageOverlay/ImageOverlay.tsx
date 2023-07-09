@@ -1,21 +1,16 @@
 import styles from "./ImageOverlay.module.css";
 import { HeroImage } from "../HeroImage";
-import { Title } from "../Title";
-import { Logo } from "../Logo";
+import { ReactNode } from "react";
 
-const ImageOverlay = () => {
+interface ImageOverlayProps {
+  children: string | ReactNode;
+}
+
+const ImageOverlay = ({ children }: ImageOverlayProps) => {
   return (
     <div className={styles.container}>
-      <HeroImage />
-      <div className={styles.overlay}>
-        <div className={styles.logo}>
-          <Logo />
-        </div>
-        <Title text={"LEY Consulting"} />
-        <p className={styles.subtext}>
-          Empowering Professionals, Elevating Businesses
-        </p>
-      </div>
+      <HeroImage imageSrc={"/lauren.jpeg"} imageAlt={"Lauren"} />
+      <div className={styles.overlay}>{children}</div>
     </div>
   );
 };
