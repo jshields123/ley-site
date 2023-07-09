@@ -1,6 +1,6 @@
 .title__container {
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
 }
 
 .title__text {

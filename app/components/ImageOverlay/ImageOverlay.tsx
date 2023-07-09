@@ -9,7 +9,7 @@ interface ImageOverlayProps {
 const ImageOverlay = ({ children }: ImageOverlayProps) => {
   return (
     <div className={styles.container}>
-      <HeroImage imageSrc={"/lauren.jpeg"} imageAlt={"Lauren"} />
+      <HeroImage imageSrc={"/lauren1.jpeg"} imageAlt={"Lauren"} />
       <div className={styles.overlay}>{children}</div>
     </div>
   );
