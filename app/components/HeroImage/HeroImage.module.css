@@ -6,4 +6,5 @@
 
 .hero__image {
   object-fit: "cover";
+  filter: grayscale(100%);
 }

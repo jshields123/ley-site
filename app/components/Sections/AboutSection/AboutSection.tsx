@@ -12,6 +12,7 @@ const AboutSection = () => {
       />
 
       <Image
+        className={styles.image}
         src={"/lauren-linkedin2.jpeg"}
         alt={"Lauren at work"}
         width={150}
