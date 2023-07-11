@@ -1,10 +1,14 @@
 import styles from "./Footer.module.css";
 
-const Footer = () => {
+interface FooterProps {
+  text: string;
+}
+
+const Footer = ({ text }: FooterProps) => {
   return (
     <footer>
       <div className={styles.footer__text}>
-        <p>&copy; 2023 LEY Website. All rights reserved.</p>
+        <p>&copy; {text}</p>
       </div>
     </footer>
   );

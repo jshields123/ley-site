@@ -10,3 +10,4 @@ export * from "./Cards";
 export * from "./Sections/AboutSection";
 export * from "./Sections/SignUpSection";
 export * from "./Form";
+export * from "./SubTitle";

@@ -2,6 +2,7 @@ import styles from "../IntroSection/IntroSection.module.css";
 import { ImageOverlay } from "../../ImageOverlay/ImageOverlay";
 import { Logo } from "../../Logo/Logo";
 import { Title } from "../../Title/Title";
+import { SubTitle } from "../../SubTitle";
 
 const IntroSection = () => {
   return (
@@ -12,9 +13,7 @@ const IntroSection = () => {
             <Logo />
           </div>
           <Title text={"LEY Consulting"} />
-          <p className={styles.subtext}>
-            Empowering Professionals, Elevating Businesses
-          </p>
+          <SubTitle text={"Empowering Professionals, Elevating Businesses"} />
         </div>
       </ImageOverlay>
     </div>

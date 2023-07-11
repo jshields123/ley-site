@@ -16,7 +16,7 @@ export default function Home() {
           <SignUpSection />
         </div>
       </main>
-      <Footer />
+      <Footer text={"2023 LEY. All rights reserved."} />
     </Layout>
   );
 }
