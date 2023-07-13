@@ -1,8 +1,12 @@
 import styles from "./page.module.css";
 import Layout from "./layout";
-import { Footer, SignUpSection } from "./components";
-import { IntroSection } from "./components/Sections/IntroSection/IntroSection";
-import { AboutSection } from "./components/Sections/AboutSection/AboutSection";
+import {
+  Footer,
+  ReferralsSection,
+  SignUpSection,
+  IntroSection,
+  AboutSection,
+} from "./components";
 
 export default function Home() {
   return (
@@ -12,6 +16,7 @@ export default function Home() {
         <div className={styles.about__container}>
           <AboutSection />
         </div>
+        <ReferralsSection />
         <div className={styles.form__container}>
           <SignUpSection />
         </div>

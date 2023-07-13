@@ -1,3 +1,30 @@
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.brands {
+  background-color: white;
+  overflow: hidden;
+  padding: 1rem 0;
+  white-space: nowrap;
+}
+
+.brands:hover .brands__slide {
+  animation-play-state: paused;
+}
+
+.brands__slide {
+  display: inline-block;
+
+  animation: 20s slide infinite linear;
+}
+
 .brands__slide img {
   height: 2rem;
+  margin: 0 1rem;
 }
