@@ -12,6 +12,7 @@
   overflow: hidden;
   padding: 1rem 0;
   white-space: nowrap;
+  background-color: black;
 }
 
 .brands:hover .brands__slide {

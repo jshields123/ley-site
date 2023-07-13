@@ -7,7 +7,7 @@ const AboutSection = () => {
     <div className={styles.about_container__wrapper}>
       <TextCard
         text={
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum,officia iure saepe voluptatem temporibus, praesentium ad unde possimusquis earum aspernatur, alias dolorem? Reprehenderit dolorum laudantiumfuga expedita, ducimus impedit?"
+          "Over 15 years experience working across the UK & Australia. I am a passionate relationship builder, recruiter, trainer and leader. My industry experience spans from global corporate, tech start-up to not-for-profit and healthcare; one thing remains consistent, my passion for people 💡"
         }
       />
 
