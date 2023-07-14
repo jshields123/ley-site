@@ -1,11 +1,12 @@
 import styles from "./FormCard.module.css";
 import { Form } from "../../Form";
 import { Card } from "../Card";
+import { SubTitle } from "../../SubTitle";
 
 const FormCard = () => {
   return (
     <Card>
-      <h2>Contact Us</h2>
+      <SubTitle text={"Contact Us"}></SubTitle>
       <Form />
     </Card>
   );

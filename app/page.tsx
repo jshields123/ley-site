@@ -16,8 +16,10 @@ export default function Home() {
         <div className={styles.about__container}>
           <AboutSection />
         </div>
-        <ReferralsSection />
-        <div className={styles.form__container}>
+        <div className={styles.referral_container}>
+          <ReferralsSection />
+        </div>
+        <div className={styles.signup__container}>
           <SignUpSection />
         </div>
       </main>

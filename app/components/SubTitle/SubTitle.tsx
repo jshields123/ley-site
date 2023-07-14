@@ -7,7 +7,7 @@ interface SubTitleProps {
 const SubTitle = ({ text }: SubTitleProps) => {
   return (
     <div className={styles.subtitle__container}>
-      <h3 className={styles.subtitle__text}>{text}</h3>
+      <h2 className={styles.subtitle__text}>{text}</h2>
     </div>
   );
 };
