@@ -7,7 +7,7 @@ import { SubTitle } from "../../SubTitle";
 const IntroSection = () => {
   return (
     <div className={styles.intro_container__wrapper}>
-      <ImageOverlay imageSrc={"/lauren1.jpeg"}>
+      <ImageOverlay imageSrc={"/lauren1.jpeg"} alt={"lauren"} type={"intro"}>
         <div className={styles.overlay}>
           <div className={styles.logo}>
             <Logo />
