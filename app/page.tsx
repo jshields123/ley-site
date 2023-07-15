@@ -1,4 +1,5 @@
 import styles from "./page.module.css";
+import { Inter } from "next/font/google";
 import Layout from "./layout";
 import {
   Footer,
@@ -8,10 +9,12 @@ import {
   AboutSection,
 } from "./components";
 
+const inter = Inter({ subsets: ["latin"] });
+
 export default function Home() {
   return (
     <Layout>
-      <main className={styles.main}>
+      <main className={inter.className}>
         <IntroSection />
         <div className={styles.about__container}>
           <AboutSection />
@@ -22,8 +25,8 @@ export default function Home() {
         <div className={styles.signup__container}>
           <SignUpSection />
         </div>
+        <Footer text={"2023 LEY. All rights reserved."} />
       </main>
-      <Footer text={"2023 LEY. All rights reserved."} />
     </Layout>
   );
 }

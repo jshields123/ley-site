@@ -16,10 +16,11 @@ const ReferralsSection = () => {
             }
           />
           <Image
+            className={styles.another_random_lady}
             src={"/another_random.jpeg"}
             alt={"random lady"}
-            width={80}
-            height={80}
+            width={160}
+            height={160}
           />
         </div>
         <div className={styles.referral_single}>
@@ -29,10 +30,11 @@ const ReferralsSection = () => {
             }
           />
           <Image
+            className={styles.random_lady}
             src={"/random_lady.jpeg"}
             alt={"random lady"}
-            width={80}
-            height={80}
+            width={160}
+            height={160}
           />
         </div>
       </div>

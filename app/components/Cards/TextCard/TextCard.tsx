@@ -8,8 +8,8 @@ interface TextCardProps {
 const TextCard = ({ text }: TextCardProps) => {
   return (
     <Card>
-      <div className={styles.image__container}>
-        <p>{text}</p>
+      <div className={styles.text__container}>
+        <p className={styles.text}>{text}</p>
       </div>
     </Card>
   );

@@ -1,7 +1,11 @@
 .subtitle__text {
   color: white;
-  font-size: 18px;
-  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
   font-weight: 500;
   padding: 0 5rem;
+}
+
+.subtitle__container {
+  display: flex;
+  justify-content: center;
 }

@@ -1,4 +1,15 @@
-.about_container__wrapper {
+.about__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about__title {
+  display: flex;
+  justify-content: center;
+}
+
+.about_content {
   display: flex;
   flex-direction: row;
   background-color: black;
@@ -9,5 +20,6 @@
 
 .image {
   filter: grayscale(100%);
-  border-radius: 0.5rem;
+  border-radius: 7rem;
+  padding: 2rem 2rem;
 }

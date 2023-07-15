@@ -4,8 +4,7 @@
 }
 
 .title__text {
+  color: white;
   font-size: 2rem;
   font-weight: 700;
-  color: white;
-  font-family: "Roboto", sans-serif;
 }

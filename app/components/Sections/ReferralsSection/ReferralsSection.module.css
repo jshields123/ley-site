@@ -1,31 +1,38 @@
 .referrals_container__wrapper {
-  height: 100vh;
   background-color: black;
-  width: 850px;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  width: 850px;
 }
 
 .referral_group {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
   width: 100%;
 }
 
 .referral_single:first-of-type {
+  align-items: center;
   display: flex;
   flex-direction: row-reverse;
-  align-items: center;
-  height: 100%;
+  flex-grow: 1;
   width: 100%;
 }
 
-.referral_single:second-of-type {
+.referral_single:nth-of-type(2) {
+  align-items: center;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  height: 100%;
+  flex-grow: 1;
   width: 100%;
+}
+
+.another_random_lady {
+  border-radius: 8rem;
+}
+.random_lady {
+  border-radius: 8rem;
 }

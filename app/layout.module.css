@@ -1,6 +1,9 @@
 .layout {
-  margin: 0;
+  align-items: center;
+  background-color: black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 100vh;
+  margin: 0;
 }
