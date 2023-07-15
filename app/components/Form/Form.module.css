@@ -10,16 +10,6 @@
   width: 100%;
 }
 
-.label {
-  font-size: 0.8rem;
-  padding: 1rem 0 0 0.2rem;
-}
-
-.input {
-  border-radius: 0.3rem;
-  width: 100%;
-}
-
 .button_label {
   border: 0;
   clip-path: inset(50%);
