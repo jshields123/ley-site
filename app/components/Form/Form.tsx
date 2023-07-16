@@ -3,7 +3,7 @@
 import { FormField } from "../FormField";
 
 import styles from "./Form.module.css";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { FormEvent, useState } from "react";
 
 const Form = () => {
   const [firstName, setFirstName] = useState<string>("");
@@ -11,13 +11,24 @@ const Form = () => {
   const [company, setCompany] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
   const [email, setEmail] = useState<string>("");
+  const [error, setError] = useState<string>("");
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     console.log(firstName, lastName, company, phone, email);
-  };
 
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ firstName, lastName, company, phone, email }),
+    });
+    const { msg } = await res.json();
+    setError(msg);
+    console.log(error);
+  };
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <FormField
