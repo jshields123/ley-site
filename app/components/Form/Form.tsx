@@ -1,78 +1,56 @@
 "use client";
 
 import { FormField } from "../FormField";
+
 import styles from "./Form.module.css";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 const Form = () => {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    company: "",
-    phone: "",
-    email: "",
-  });
+  const [firstName, setFirstName] = useState<string>("");
+  const [lastName, setLastName] = useState<string>("");
+  const [company, setCompany] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
-  };
-
-  const handleSubmit = async (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch("/api/submit-form", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) {
-        throw new Error("Error submitting form");
-      }
-
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.error(error);
-    }
+    console.log(firstName, lastName, company, phone, email);
   };
+
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <FormField
         label={"First Name*:"}
         id={"first"}
-        name={"first"}
-        handleChange={handleChange}
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
       />
       <FormField
         label={"Last Name:"}
         id={"last"}
-        name={"last"}
-        handleChange={handleChange}
+        value={lastName}
+        onChange={(e) => setLastName(e.target.value)}
       />
       <FormField
         label={"Company:"}
         id={"company"}
-        name="company"
-        handleChange={handleChange}
+        value={company}
+        onChange={(e) => setCompany(e.target.value)}
       />
       <FormField
         label={"Phone*:"}
         id={"phone"}
-        name="phone"
+        value={phone}
         type="number"
-        handleChange={handleChange}
+        onChange={(e) => setPhone(e.target.value)}
       />
       <FormField
         label={"Email*:"}
         id={"email"}
-        name={"email"}
+        value={email}
         type="email"
-        handleChange={handleChange}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <label className={styles.button_label} htmlFor="submit">
         Submit

@@ -3,17 +3,17 @@ import styles from "./FormField.module.css";
 export interface FormFieldProps {
   label: string;
   id: string;
-  name: string;
+  value: string;
   type?: string;
-  handleChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const FormField: React.FC<FormFieldProps> = ({
   label,
   id,
-  name,
+  value,
   type = "text",
-  handleChange,
+  onChange,
 }: FormFieldProps) => {
   return (
     <>
@@ -24,8 +24,8 @@ const FormField: React.FC<FormFieldProps> = ({
         className={styles.input}
         type={type}
         id={id}
-        name={name}
-        onChange={handleChange}
+        value={value}
+        onChange={onChange}
       />
     </>
   );
