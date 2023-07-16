@@ -1,9 +1,3 @@
-.sign_up_section__wrapper {
-  background-color: black;
-  width: 850px;
-  height: 100vh;
-}
-
 .overlay {
   display: flex;
   flex-direction: column;

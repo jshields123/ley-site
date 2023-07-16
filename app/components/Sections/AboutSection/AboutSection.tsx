@@ -6,9 +6,9 @@ import Image from "next/image";
 const AboutSection = () => {
   return (
     <>
-      <div className={styles.about__title}>
+      {/* <div className={styles.about__title}>
         <SubTitle text={"About"} />
-      </div>
+      </div> */}
       <div className={styles.about_content}>
         <TextCard
           text={

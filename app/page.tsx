@@ -1,5 +1,5 @@
 import styles from "./page.module.css";
-import { Inter } from "next/font/google";
+import { Hind } from "next/font/google";
 import Layout from "./layout";
 import {
   Footer,
@@ -9,13 +9,16 @@ import {
   AboutSection,
 } from "./components";
 
-const inter = Inter({ subsets: ["latin"] });
+const hind = Hind({
+  subsets: ["latin"],
+  weight: "300",
+});
 
 export default function Home() {
   return (
     <>
       <Layout>
-        <main className={inter.className}>
+        <main className={hind.className}>
           <div className={`${styles.intro__container} ${styles.hidden}`}>
             <IntroSection />
           </div>

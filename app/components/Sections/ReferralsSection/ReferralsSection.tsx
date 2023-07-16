@@ -7,7 +7,7 @@ import Image from "next/image";
 const ReferralsSection = () => {
   return (
     <>
-      <SubTitle text={"Referrals"}></SubTitle>
+      {/* <SubTitle text={"Referrals"}></SubTitle> */}
       <div className={styles.referral_group}>
         <div className={styles.referral_single}>
           <TextCard
