@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const AboutSection = () => {
   return (
-    <div className={styles.about__wrapper}>
+    <>
       <div className={styles.about__title}>
         <SubTitle text={"About"} />
       </div>
@@ -23,7 +23,7 @@ const AboutSection = () => {
           height={180}
         />
       </div>
-    </div>
+    </>
   );
 };
 

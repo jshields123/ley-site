@@ -4,7 +4,7 @@ import { ImageOverlay } from "../../ImageOverlay";
 
 const SignUpSection = () => {
   return (
-    <div className={styles.sign_up_section__wrapper}>
+    <>
       <ImageOverlay
         imageSrc={"/meeting.jpg"}
         alt={"business meeting"}
@@ -14,7 +14,7 @@ const SignUpSection = () => {
           <FormCard />
         </div>
       </ImageOverlay>
-    </div>
+    </>
   );
 };
 

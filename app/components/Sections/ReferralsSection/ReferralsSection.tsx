@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const ReferralsSection = () => {
   return (
-    <div className={styles.referrals_container__wrapper}>
+    <>
       <SubTitle text={"Referrals"}></SubTitle>
       <div className={styles.referral_group}>
         <div className={styles.referral_single}>
@@ -39,7 +39,7 @@ const ReferralsSection = () => {
         </div>
       </div>
       <Carousel />
-    </div>
+    </>
   );
 };
 

@@ -30,7 +30,8 @@
     ".next/types/**/*.ts",
     "app/server/Users.js",
     "app/server/Users.js",
-    "app/api/contact/route.js"
+    "app/api/contact/route.js",
+    "public/font_animation.js"
   ],
   "exclude": ["node_modules"]
 }

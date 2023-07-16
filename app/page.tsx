@@ -13,20 +13,24 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <Layout>
-      <main className={inter.className}>
-        <IntroSection />
-        <div className={styles.about__container}>
-          <AboutSection />
-        </div>
-        <div className={styles.referral_container}>
-          <ReferralsSection />
-        </div>
-        <div className={styles.signup__container}>
-          <SignUpSection />
-        </div>
-        <Footer text={"2023 LEY. All rights reserved."} />
-      </main>
-    </Layout>
+    <>
+      <Layout>
+        <main className={inter.className}>
+          <div className={`${styles.intro__container} ${styles.hidden}`}>
+            <IntroSection />
+          </div>
+          <div className={`${styles.about__container} ${styles.hidden}`}>
+            <AboutSection />
+          </div>
+          <div className={`${styles.referral__container} ${styles.hidden}`}>
+            <ReferralsSection />
+          </div>
+          <div className={`${styles.signup__container} ${styles.hidden}`}>
+            <SignUpSection />
+          </div>
+          <Footer text={"2023 LEY. All rights reserved."} />
+        </main>
+      </Layout>
+    </>
   );
 }

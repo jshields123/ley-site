@@ -1,34 +1,55 @@
 .intro__container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  place-items: center;
+  align-items: center;
   min-height: 100vh;
+  padding: 0 2rem;
+  max-width: 850px;
 }
 
 .about__container {
   background-color: black;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  place-items: center;
+  align-items: center;
   min-height: 100vh;
+  padding: 0 2rem;
+  max-width: 850px;
 }
 
 .referral__container {
   background-color: black;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  place-items: center;
+  align-items: center;
   min-height: 100vh;
+  padding: 0 2rem;
+  max-width: 850px;
 }
 
 .signup__container {
   background-color: black;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  place-items: center;
+  align-items: center;
   min-height: 100vh;
+  padding: 0 2rem;
+  max-width: 850px;
+}
+
+/* .hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 3s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+} */
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
 }

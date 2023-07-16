@@ -1,11 +1,11 @@
-.referrals_container__wrapper {
+/* .referrals_container__wrapper {
   background-color: black;
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
   width: 850px;
-}
+} */
 
 .referral_group {
   display: flex;
