@@ -1,3 +1,4 @@
+"use client";
 import styles from "./page.module.css";
 import { Hind } from "next/font/google";
 import Layout from "./layout";
@@ -8,6 +9,7 @@ import {
   IntroSection,
   AboutSection,
 } from "./components";
+import { useEffect } from "react";
 
 const hind = Hind({
   subsets: ["latin"],
@@ -15,6 +17,24 @@ const hind = Hind({
 });
 
 export default function Home() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.show);
+        } else {
+          entry.target.classList.remove(styles.show);
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll(`.${styles.hidden}`);
+    hiddenElements.forEach((element) => observer.observe(element));
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
   return (
     <>
       <Layout>

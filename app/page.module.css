@@ -37,19 +37,13 @@
   max-width: 850px;
 }
 
-/* .hidden {
+.hidden {
   opacity: 0;
   filter: blur(5px);
-  transition: all 3s;
+  transition: all 2s;
 }
 
 .show {
   opacity: 1;
   filter: blur(0);
-} */
-
-@media (prefers-reduced-motion) {
-  .hidden {
-    transition: none;
-  }
 }
