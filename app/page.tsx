@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-import { Hind } from "next/font/google";
+import { Inter } from "next/font/google";
 import Layout from "./layout";
 import {
   Footer,
@@ -11,7 +11,7 @@ import {
 } from "./components";
 import { useEffect } from "react";
 
-const hind = Hind({
+const hind = Inter({
   subsets: ["latin"],
   weight: "300",
 });
