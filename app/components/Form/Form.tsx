@@ -4,6 +4,7 @@ import { FormField } from "../FormField";
 
 import styles from "./Form.module.css";
 import { FormEvent, useState } from "react";
+import { Button } from "../Button/Button";
 
 const Form = () => {
   const [firstName, setFirstName] = useState<string>("");
@@ -66,9 +67,7 @@ const Form = () => {
       <label className={styles.button_label} htmlFor="submit">
         Submit
       </label>
-      <button className={styles.form_button} type="submit">
-        Submit
-      </button>
+      <Button buttonText={"Submit"} type={"submit"} isDisabled={false}></Button>
     </form>
   );
 };

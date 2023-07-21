@@ -15,7 +15,7 @@ const ImageOverlay = ({ children, imageSrc, alt, type }: ImageOverlayProps) => {
       <Image
         src={imageSrc}
         alt={alt}
-        width={850}
+        width={1050}
         height={700}
         className={`${type}__image`}
       />

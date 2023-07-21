@@ -12,3 +12,4 @@ export * from "./Form";
 export * from "./SubTitle";
 export * from "./Sections/ReferralsSection";
 export * from "./FormField";
+export * from "./Button";
