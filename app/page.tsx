@@ -11,6 +11,7 @@ import {
   AboutSection,
 } from "./components";
 import { useEffect } from "react";
+import { ServicesSection } from "./components/Sections";
 
 const hind = Montserrat({
   subsets: ["latin"],
@@ -42,6 +43,9 @@ export default function Home() {
         <main className={hind.className}>
           <div className={`${styles.container} ${styles.hidden}`}>
             <IntroSection />
+          </div>
+          <div className={`${styles.container} ${styles.hidden}`}>
+            <ServicesSection />
           </div>
           <div className={`${styles.container} ${styles.hidden}`}>
             <AboutSection />
