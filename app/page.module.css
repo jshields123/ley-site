@@ -1,40 +1,11 @@
-.intro__container {
+.container {
   display: grid;
   place-items: center;
   align-items: center;
   min-height: 100vh;
   padding: 0 2rem;
   max-width: 850px;
-}
-
-.about__container {
-  background-color: black;
-  display: grid;
-  place-items: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 0 2rem;
-  max-width: 850px;
-}
-
-.referral__container {
-  background-color: black;
-  display: grid;
-  place-items: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 0 2rem;
-  max-width: 850px;
-}
-
-.signup__container {
-  background-color: black;
-  display: grid;
-  place-items: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 0 2rem;
-  max-width: 850px;
+  background-color: var(--black-color);
 }
 
 @keyframes fadeInDown {

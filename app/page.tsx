@@ -1,6 +1,7 @@
 "use client";
 import styles from "./page.module.css";
-import { Inter } from "next/font/google";
+import "./globals.css";
+import { Montserrat } from "next/font/google";
 import Layout from "./layout";
 import {
   Footer,
@@ -10,9 +11,8 @@ import {
   AboutSection,
 } from "./components";
 import { useEffect } from "react";
-import LinkedInIcon from "./components/Icons/LinkedInIcon";
 
-const hind = Inter({
+const hind = Montserrat({
   subsets: ["latin"],
   weight: "300",
 });
@@ -40,17 +40,16 @@ export default function Home() {
     <>
       <Layout>
         <main className={hind.className}>
-          <div className={`${styles.intro__container} ${styles.hidden}`}>
+          <div className={`${styles.container} ${styles.hidden}`}>
             <IntroSection />
-            <LinkedInIcon />
           </div>
-          <div className={`${styles.about__container} ${styles.hidden}`}>
+          <div className={`${styles.container} ${styles.hidden}`}>
             <AboutSection />
           </div>
-          <div className={`${styles.referral__container} ${styles.hidden}`}>
+          <div className={`${styles.container} ${styles.hidden}`}>
             <ReferralsSection />
           </div>
-          <div className={`${styles.signup__container} ${styles.hidden}`}>
+          <div className={`${styles.container} ${styles.hidden}`}>
             <SignUpSection />
           </div>
           <Footer text={"2023 LEY. All rights reserved."} />

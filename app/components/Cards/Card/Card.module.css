@@ -1,7 +1,7 @@
 .card {
   align-items: center;
   border-radius: 0.5rem;
-  color: white;
+  color: var(--white-color);
   display: flex;
   flex-direction: column;
   justify-content: center;

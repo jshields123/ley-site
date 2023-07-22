@@ -4,6 +4,7 @@ import { Title } from "../../Title/Title";
 import { SubTitle } from "../../SubTitle";
 import { Button } from "../../Button/Button";
 import { Navbar } from "../../Navbar/Navbar";
+import { TertiaryTitle } from "../../TertiaryTitle";
 
 const IntroSection = () => {
   const onClick = () => {
@@ -23,6 +24,11 @@ const IntroSection = () => {
           <div className={styles.intro_text}>
             <Title text={"LEY Consulting"} />
             <SubTitle text={"Empowering Professionals, Elevating Businesses"} />
+            <TertiaryTitle
+              text={
+                "Your trusted partner for recruitment services, sales consulting and HR software consulting"
+              }
+            />
             <div className={styles.button}>
               <Button
                 buttonText={"Call now"}

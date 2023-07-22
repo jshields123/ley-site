@@ -1,5 +1,5 @@
 .button {
-  background-color: #fff;
+  background-color: var(--white-color);
   border: 1px solid #eaeaea;
   border-radius: 4px;
   color: #333;
