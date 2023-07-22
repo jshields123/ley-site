@@ -67,7 +67,9 @@ const Form = () => {
       <label className={styles.button_label} htmlFor="submit">
         Submit
       </label>
-      <Button buttonText={"Submit"} type={"submit"} isDisabled={false}></Button>
+      <div className={styles.button_container}>
+        <Button buttonText={"Submit"} type={"submit"} isDisabled={false} />
+      </div>
     </form>
   );
 };

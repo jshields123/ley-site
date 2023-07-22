@@ -21,6 +21,12 @@
   position: absolute;
   width: 1px;
 }
+.button_container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  width: 100%;
+}
 
 .form_button {
   margin-top: 1rem;

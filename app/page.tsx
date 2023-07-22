@@ -8,6 +8,8 @@ import {
   SignUpSection,
   IntroSection,
   AboutSection,
+  Navbar,
+  NAVBAR_ITEMS,
 } from "./components";
 import { useEffect } from "react";
 

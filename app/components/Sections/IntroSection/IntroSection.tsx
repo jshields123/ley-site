@@ -1,9 +1,9 @@
 import styles from "../IntroSection/IntroSection.module.css";
 import { ImageOverlay } from "../../ImageOverlay/ImageOverlay";
-import { Logo } from "../../Logo/Logo";
 import { Title } from "../../Title/Title";
 import { SubTitle } from "../../SubTitle";
 import { Button } from "../../Button/Button";
+import { Navbar } from "../../Navbar/Navbar";
 
 const IntroSection = () => {
   const onClick = () => {
@@ -13,17 +13,21 @@ const IntroSection = () => {
     <>
       <ImageOverlay imageSrc={"/lauren1.jpeg"} alt={"lauren"} type={"intro"}>
         <div className={styles.overlay}>
-          <div className={styles.logo}>
-            <Logo />
+          <div className={styles.nav}>
+            <Navbar />
           </div>
-          <Title text={"LEY Consulting"} />
-          <SubTitle text={"Empowering Professionals, Elevating Businesses"} />
-          <Button
-            buttonText={"Call now"}
-            type={"button"}
-            isDisabled={false}
-            onClick={onClick}
-          />
+          <div className={styles.intro_text}>
+            <Title text={"LEY Consulting"} />
+            <SubTitle text={"Empowering Professionals, Elevating Businesses"} />
+            <div className={styles.button}>
+              <Button
+                buttonText={"Call now"}
+                type={"button"}
+                isDisabled={false}
+                onClick={onClick}
+              />
+            </div>
+          </div>
         </div>
       </ImageOverlay>
     </>
