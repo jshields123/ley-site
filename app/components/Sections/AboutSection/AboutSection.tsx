@@ -1,4 +1,5 @@
 import { TextCard } from "../../Cards";
+import EmailIcon from "../../Icons/EmailIcon";
 import { SubTitle } from "../../SubTitle";
 import styles from "./AboutSection.module.css";
 import Image from "next/image";
@@ -15,9 +16,10 @@ const AboutSection = () => {
             "Over 15 years experience working across the UK & Australia. I am a passionate relationship builder, recruiter, trainer and leader. My industry experience spans from global corporate, tech start-up to not-for-profit and healthcare; one thing remains consistent, my passion for people 💡"
           }
         />
+        <EmailIcon />
         <Image
           className={styles.image}
-          src={"/lauren-linkedin2.jpeg"}
+          src={"/images/lauren-linkedin2.jpeg"}
           alt={"Lauren at work"}
           width={180}
           height={180}

@@ -1,53 +1,54 @@
-const EmailIcon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="612"
-      height="612"
-      version="1"
-    >
-      <defs>
-        <marker
-          markerHeight="3"
-          markerUnits="strokeWidth"
-          markerWidth="4"
-          orient="auto"
-          refX="0"
-          refY="5"
-          viewBox="0 0 10 10"
-        >
-          <path d="M0 0l10 5-10 5V0z"></path>
-        </marker>
-        <marker
-          markerHeight="3"
-          markerUnits="strokeWidth"
-          markerWidth="4"
-          orient="auto"
-          refX="10"
-          refY="5"
-          viewBox="0 0 10 10"
-        >
-          <path d="M10 0L0 5l10 5V0z"></path>
-        </marker>
-      </defs>
-      <g transform="translate(-58.515 -15.604)">
-        <g>
-          <path
-            fill="#000"
-            stroke="#fff"
-            strokeWidth="3.408"
-            d="M140.865 32.943c-41.335 0-64.571 21.371-64.571 65.036v450.122c0 40.843 20.891 62.228 62.192 62.228H590.51c41.303 0 62.226-20.32 62.226-62.228V97.979c0-42.6-20.923-65.036-63.523-65.036 0 0-448.491-.142-448.348 0z"
-          ></path>
-        </g>
-        <g fill="none" stroke="#fff" strokeWidth="30.655">
-          <path d="M569.372 461.472V160.658H160.658v300.814h408.714z"></path>
-          <path d="M164.46 164.49l176.32 178.668c13.069 13.17 36.848 13.014 49.641.12l176.199-177.35"></path>
-          <path d="M170.514 451.566L305.609 313.46"></path>
-          <path d="M557.966 449.974L426.514 315.375"></path>
-        </g>
+const EmailIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fillRule="evenodd"
+    strokeLinejoin="round"
+    strokeMiterlimit="2"
+    clipRule="evenodd"
+    viewBox="0 0 612 612"
+    width="25"
+    height="25"
+  >
+    <defs>
+      <marker
+        id="ArrowEnd"
+        markerHeight="3"
+        markerUnits="strokeWidth"
+        markerWidth="4"
+        orient="auto"
+        refX="0"
+        refY="5"
+        viewBox="0 0 10 10"
+      >
+        <path d="M 0,0 L 10,5 L 0,10 L 0,0 z" id="path1397" />
+      </marker>
+      <marker
+        id="ArrowStart"
+        markerHeight="3"
+        markerUnits="strokeWidth"
+        markerWidth="4"
+        orient="auto"
+        refX="10"
+        refY="5"
+        viewBox="0 0 10 10"
+      >
+        <path d="M 10,0 L 0,5 L 10,10 L 10,0 z" id="path1400" />
+      </marker>
+    </defs>
+    <g transform="translate(-58.515,-15.604444)">
+      <g>
+        <path
+          d="M 140.865,32.943 C 99.53,32.943 76.294,54.314 76.294,97.979 L 76.294,548.101 C 76.294,588.944 97.185,610.329 138.486,610.329 L 590.51,610.329 C 631.813,610.329 652.736,590.009 652.736,548.101 L 652.736,97.979 C 652.736,55.379 631.813,32.943 589.213,32.943 C 589.213,32.943 140.722,32.801 140.865,32.943 z"
+          style={{ fill: "#000000", stroke: "#686565", strokeWidth: 3.408 }}
+        />
       </g>
-    </svg>
-  );
-};
-
+      <g fill="none" stroke="#615f5f" strokeWidth="30.655">
+        <path d="M 569.372,461.472 L 569.372,160.658 L 160.658,160.658 L 160.658,461.472 L 569.372,461.472 z" />
+        <path d="M 164.46,164.49 L 340.78,343.158 C 353.849,356.328 377.628,356.172 390.421,343.278 L 566.62,165.928" />
+        <path d="M 170.514,451.566 L 305.609,313.46" />
+        <path d="M 557.966,449.974 L 426.514,315.375" />
+      </g>
+    </g>
+  </svg>
+);
 export default EmailIcon;

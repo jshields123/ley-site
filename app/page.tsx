@@ -8,10 +8,9 @@ import {
   SignUpSection,
   IntroSection,
   AboutSection,
-  Navbar,
-  NAVBAR_ITEMS,
 } from "./components";
 import { useEffect } from "react";
+import LinkedInIcon from "./components/Icons/LinkedInIcon";
 
 const hind = Inter({
   subsets: ["latin"],
@@ -43,6 +42,7 @@ export default function Home() {
         <main className={hind.className}>
           <div className={`${styles.intro__container} ${styles.hidden}`}>
             <IntroSection />
+            <LinkedInIcon />
           </div>
           <div className={`${styles.about__container} ${styles.hidden}`}>
             <AboutSection />

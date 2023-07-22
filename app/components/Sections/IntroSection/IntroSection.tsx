@@ -11,7 +11,11 @@ const IntroSection = () => {
   };
   return (
     <>
-      <ImageOverlay imageSrc={"/lauren1.jpeg"} alt={"lauren"} type={"intro"}>
+      <ImageOverlay
+        imageSrc={"/images/lauren1.jpeg"}
+        alt={"lauren"}
+        type={"intro"}
+      >
         <div className={styles.overlay}>
           <div className={styles.nav}>
             <Navbar />

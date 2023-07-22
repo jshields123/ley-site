@@ -2,14 +2,14 @@ import styles from "./Carousel.module.css";
 import Image from "next/image";
 
 const images = [
-  { src: "/3m.svg", alt: "3m" },
-  { src: "/barstool-store.svg", alt: "barstool-store" },
-  { src: "/budweiser.svg", alt: "budweiser" },
-  { src: "/buzzfeed.svg", alt: "buzzfeed" },
-  { src: "/forbes.svg", alt: "forbes" },
-  { src: "/macys.svg", alt: "macys" },
-  { src: "/menshealth.svg", alt: "menshealth" },
-  { src: "/mrbeast.svg", alt: "mrbeast" },
+  { src: "/icons/3m.svg", alt: "3m" },
+  { src: "/icons/barstool-store.svg", alt: "barstool-store" },
+  { src: "/icons/budweiser.svg", alt: "budweiser" },
+  { src: "/icons/buzzfeed.svg", alt: "buzzfeed" },
+  { src: "/icons/forbes.svg", alt: "forbes" },
+  { src: "/icons/macys.svg", alt: "macys" },
+  { src: "icons/menshealth.svg", alt: "menshealth" },
+  { src: "icons/mrbeast.svg", alt: "mrbeast" },
 ];
 
 const Carousel = () => {

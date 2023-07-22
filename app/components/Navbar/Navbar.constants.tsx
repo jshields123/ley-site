@@ -10,8 +10,8 @@ interface NavbarItem {
 }
 
 export const NAVBAR_ITEMS: NavbarItem[] = [
-  { linkHref: "/phone", Icon: PhoneIcon },
-  { linkHref: "/email", Icon: EmailIcon },
-  { linkHref: "/instagram", Icon: InstagramIcon },
-  { linkHref: "/linkedIn", Icon: LinkedInIcon },
+  { linkHref: "/phone", Icon: <PhoneIcon /> },
+  { linkHref: "/email", Icon: <EmailIcon /> },
+  { linkHref: "/instagram", Icon: <InstagramIcon /> },
+  { linkHref: "/linkedIn", Icon: <LinkedInIcon /> },
 ];

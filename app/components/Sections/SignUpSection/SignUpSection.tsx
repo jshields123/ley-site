@@ -6,7 +6,7 @@ const SignUpSection = () => {
   return (
     <>
       <ImageOverlay
-        imageSrc={"/meeting.jpg"}
+        imageSrc={"/images/meeting.jpg"}
         alt={"business meeting"}
         type={"form"}
       >

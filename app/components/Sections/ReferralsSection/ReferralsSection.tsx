@@ -7,7 +7,6 @@ import Image from "next/image";
 const ReferralsSection = () => {
   return (
     <>
-      {/* <SubTitle text={"Referrals"}></SubTitle> */}
       <div className={styles.referral_group}>
         <div className={styles.referral_single}>
           <TextCard
@@ -17,7 +16,7 @@ const ReferralsSection = () => {
           />
           <Image
             className={styles.another_random_lady}
-            src={"/another_random.jpeg"}
+            src={"/images/another_random.jpeg"}
             alt={"random lady"}
             width={140}
             height={140}
@@ -31,7 +30,7 @@ const ReferralsSection = () => {
           />
           <Image
             className={styles.random_lady}
-            src={"/random_lady.jpeg"}
+            src={"/images/random_lady.jpeg"}
             alt={"random lady"}
             width={140}
             height={140}
