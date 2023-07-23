@@ -12,13 +12,7 @@ interface ImageOverlayProps {
 const ImageOverlay = ({ children, imageSrc, alt, type }: ImageOverlayProps) => {
   return (
     <div className={styles.container}>
-      <Image
-        src={imageSrc}
-        alt={alt}
-        width={1050}
-        height={700}
-        className={`${type}__image`}
-      />
+      <Image src={imageSrc} alt={alt} fill className={`${type}__image`} />
       <div className={styles.overlay}>{children}</div>
     </div>
   );

@@ -1,11 +1,23 @@
+.main {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  border: 1px solid red;
+}
+
 .container {
   display: grid;
   place-items: center;
   align-items: center;
   min-height: 100vh;
-  padding: 0 2rem;
-  max-width: 950px;
+  /* NEED TO GIVE THIS WIDTH A MEDIA QUERY. */
+  width: 20rem;
   background-color: var(--black-color);
+  border: 1px solid yellow;
+}
+
+@media (max-width: 40em) {
+  /*  */
 }
 
 @keyframes fadeInDown {

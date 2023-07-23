@@ -10,7 +10,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <html lang="en">
+    <html lang="en" className={styles.html}>
       <body className={styles.layout}>{children}</body>
     </html>
   );

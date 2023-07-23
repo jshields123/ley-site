@@ -11,7 +11,7 @@ const IntroSection = () => {
     window.open("tel:+610431471512");
   };
   return (
-    <>
+    <div className={styles.intro_container}>
       <ImageOverlay
         imageSrc={"/images/lauren1.jpeg"}
         alt={"lauren"}
@@ -40,7 +40,7 @@ const IntroSection = () => {
           </div>
         </div>
       </ImageOverlay>
-    </>
+    </div>
   );
 };
 

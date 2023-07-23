@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <main className={hind.className}>
+        <main className={`${hind.className} ${styles.main}`}>
           <div className={`${styles.container} ${styles.hidden}`}>
             <IntroSection />
           </div>
