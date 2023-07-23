@@ -1,5 +1,5 @@
 .intro_container {
-  width: 20rem;
+  width: var(--mob-width);
 }
 
 .nav {

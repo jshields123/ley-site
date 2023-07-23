@@ -1,13 +1,10 @@
-/* .referral_container {
-  width: 20rem;
-} */
 .referral_content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
   place-items: center;
   align-items: center;
-  width: 20rem;
+  width: var(--mob-width);
 }
 @media (max-width: 40rem) {
   .referral_content {
@@ -19,7 +16,7 @@
     align-items: center;
   }
   .referral_container {
-    width: 20rem;
+    width: var(--mob-width);
   }
 }
 

@@ -1,7 +1,6 @@
 .container {
   position: relative;
-  min-width: 20em;
-  height: auto;
+  min-width: var(--mob-width);
   min-height: 100vh;
   overflow: hidden;
 }
@@ -10,7 +9,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 20em;
+  min-width: var(--mob-width);
   min-height: 100vh;
   display: flex;
   flex-direction: column;

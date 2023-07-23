@@ -10,7 +10,7 @@
   align-items: center;
   min-height: 100vh;
   /* NEED TO GIVE THIS WIDTH A MEDIA QUERY. */
-  width: 20rem;
+  width: var(--mob-width);
   background-color: var(--black-color);
 }
 

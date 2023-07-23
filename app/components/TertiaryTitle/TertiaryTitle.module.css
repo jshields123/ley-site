@@ -9,7 +9,7 @@
   font-size: 0.7rem;
   font-weight: 500;
   line-height: 1.2;
-  text-decoration: wavy;
   color: var(--white-color);
   text-transform: uppercase;
+  text-align: center;
 }
