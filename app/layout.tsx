@@ -11,6 +11,7 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <html lang="en" className={styles.html}>
+      <title>LEY Consulting</title>
       <body className={styles.layout}>{children}</body>
     </html>
   );
