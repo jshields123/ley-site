@@ -36,8 +36,8 @@ const ReferralsSection = () => {
             height={140}
           />
         </div>
+        <Carousel />
       </div>
-      <Carousel />
     </>
   );
 };
