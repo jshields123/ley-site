@@ -7,8 +7,8 @@ const LinkedInIcon = () => {
       strokeMiterlimit="2"
       clipRule="evenodd"
       viewBox="0 0 512 512"
-      width={25}
-      height={25}
+      width={22}
+      height={22}
     >
       <path
         style={{ fill: "rgb(248, 245, 245)" }}
