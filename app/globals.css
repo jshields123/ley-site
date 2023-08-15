@@ -1,5 +1,262 @@
+/* TODO: JACK!! GROOM THIS TO BE LEY ORIENTATED - I have configured this to be a template with examples and have kept your white and black variables 
+
+/**
+ * "Global" variables include a letter "g" to easily identify them, like so:
+ *
+--g	Global
+ *
+ * "Class Prefixes for BEM - Namespacing"
+ * c-	Component
+ * l-	Layout
+ * b-	Block
+ * i-	Icon
+ * s-	State
+ *
+ *
+ * The number colour scale works like the standard typography numbering
+ * system, lower numbers represent lighter shades of the colour, with the
+ * higher numbers representing the darker shades. Here's the scale:
+ *
+ * 50 - The lightiest of lights
+ * 100 – Ultra-light.
+ * 200 – Extra-light.
+ * 300 – Semi-light.
+ * 400 – Light.
+ * 500 – Normal.
+ * 600 – Dark.
+ * 700 – Semi-dark.
+ * 800 – Extra-dark.
+ * 900 – Ultra-dark.
+ * ----------------------------------------------------------------------------
+ *
+ * CONTENTS:
+ *
+ * 1.  Colours
+ * 2.  Typography
+ * 3.  Spacing
+ * 4.  Z-Index
+ * 6.  Cosmetics
+ * 6.  Breakpoints
+
+*/
 :root {
+  /**
+  *Ley Color Pallete
+  */
+
+  /* 1. Colours */
+
+  /* All  */
+
+  /* Blue */
+  --g-color-blue-100: #52e5ba; /* Turquoise Blue */
+  --g-color-blue-200: #4bc2ca; /* Shakespeare */
+  --g-color-blue-300: #72acff; /* Malibu */
+  --g-color-blue-400: #2196f3; /* Dodger Blue */
+  --g-color-blue-600: #3f51b5; /* San Marino */
+  --g-color-blue-700: #42536e; /* Gray Chateau */
+  --g-color-blue-800: #173467; /* Biscay */
+
+  /* Purple */
+  --g-color-purple-500: #673ab7; /* Purple Heart */
+
+  /* Red */
+  --g-color-red-300: #ff4d4d; /* Sunset Orange */
+  --g-color-red-400: #f44336; /* Pomegranate */
+  --g-color-red-600: #c90035; /* Monza */
+  --g-color-red-700: #972868; /* Royal Heath */
+  --g-color-red-800: #93073e; /* Monarch */
+  --g-color-red-900: #5b1647; /* Wine Berry */
+
+  /* Pink */
+  --g-color-pink-400: #fa6980; /* Brink Pink */
+
+  /* Orange */
+  --g-color-orange-200: #ffc96c; /* Koromiko */
+  --g-color-orange-400: #ff8a00; /* Pizazz */
+
+  /* Yellow */
+  --g-color-yellow-300: #cddc39; /* Pear */
+
+  /* Green */
+  --g-color-green-300: #4caf50; /* Fruit Salad */
+
+  /* Brand */
+  --g-color-brand: var(--g-color-red-700); /* Royal Heath */
+  --g-color-brand-secondary: var(--g-color-blue-800); /* Biscay */
+  --g-color-brand-tertiary: var(--g-color-blue-200); /* Shakespeare */
+
+  /*TODO: I would suggest keeping white to #fff -- True white and have all other colours described as something else, --g-off-white: rgb(248, 245, 245); as an example and also use hashes, they are more robust #fff over rgba(blah, blah)
+  /* Accent / Neutral */
   --white-color: rgb(248, 245, 245);
   --black-color: rgb(0, 0, 0);
-  --mob-width: 22rem;
+
+  /* recomended  */
+  /* --g-color-white: #fff; /True white */
+  /* --g-color-black: #000; /* True black  */
+  --g-color-black-900: #202124; /* Shark */
+  --g-color-grey: #cccfd9; /* Ghost */
+  --g-color-grey-50: #f6f6f7; /* Porcelain */
+  --g-color-grey-100: #ecedf0; /* Athens Gray */
+  --g-color-grey-200: #cbccce; /* Iron */
+
+  /* Utility colours */
+  --g-color-warning: var(--g-color-blue-100);
+  --g-color-success: var(--g-color-yellow-300);
+  --g-color-error: var(--g-color-red-400);
+  --g-color-info: var(--g-color-blue-300);
+  --g-color-disabled: var(--g-color-grey-50);
+
+  /* 2. Typography */
+
+  --g-font-primary: 'calibri';
+  --g-font-secondary: 'rift';
+
+  /* Font sizes */
+
+  /* Sizes */
+
+  --g-font-size-7x-large: 3rem;
+  --g-font-size-6x-large: 2.75rem;
+  --g-font-size-5x-large: 2.375rem;
+  --g-font-size-4x-large: 2rem;
+  --g-font-size-3x-large: 1.75rem;
+  --g-font-size-2x-large: 1.375rem;
+  --g-font-size-x-large: 1.25rem;
+  --g-font-size-large: 1.125rem;
+  --g-font-size: 1rem;
+  --g-font-size-small: 0.875rem;
+  --g-font-size-x-small: 0.75rem;
+  --g-font-size-2x-small: 0.625rem;
+
+  /* Weights */
+  --g-font-weight-extra-light: 200;
+  --g-font-weight-light: 300;
+  --g-font-weight: 400;
+  --g-font-weight-semibold: 600;
+  --g-font-weight-bold: 700;
+
+  /* 3. Spacing */
+  --g-spacing-6x-large: 5rem; /* 80px */
+  --g-spacing-5x-large: 4rem; /* 64px */
+  --g-spacing-4x-large: 3.25rem; /* 52px */
+  --g-spacing-3x-large: 2.5rem; /* 40px */
+  --g-spacing-2x-large: 2rem; /* 32px */
+  --g-spacing-x-large: 1.5rem; /* 24px */
+  --g-spacing-large: 1.25rem; /* 20px */
+  --g-spacing: 1rem; /* 16px */
+  --g-spacing-small: 0.75rem; /* 12px */
+  --g-spacing-x-small: 0.5rem; /* 8px */
+  --g-spacing-2x-small: 0.25rem; /* 4px */
+  --g-spacing-3x-small: 0.125rem; /* 2px */
+  --g-spacing-4x-small: 0.063rem; /* 1px */
+
+  /* 4. Z-Index */
+  --g-z-underneath: -1;
+  --g-z-on-top: 1;
+  --g-z-sidebar: 1;
+  --g-z-sidebar: 2;
+  --g-z-header: 3;
+
+  /* 5. Cosmetics */
+
+  /* Overlay */
+  --g-overlay: rgba(0, 0, 0, 0.6);
+
+  /* Border */
+  --g-border-transparent: 1px solid transparent;
+  --g-border-primary: 1px solid var(--g-color-grey-100, #e4e4e3);
+  --g-border-secondary: 1px solid var(--g-color-white, #fff);
+  --g-border-round: 50%;
+
+  /* Border Radius */
+  --g-border-radius-x-small: 0.156rem; /*  2.5px */
+  --g-border-radius-small: 0.313rem; /*  5px */
+  --g-border-radius-medium: 0.625rem; /*  10px */
+  --g-border-radius-large: 0.938rem; /*  15px */
+  --g-border-radius-x-large: 1.563; /*  25px */
+  --g-border-radius-pill: 2em;
+  --g-border-radius-full: 50%;
+
+  /*TODO: These are optional, but good for accessibility if you care... not going to impact your google report.... But removing outlines on buttons is pretty bad
+  /* Focus */
+  --g-focus-primary: 0 0 0 var(--g-spacing-3x-small) var(--g-color-blue-200), inset 0 0 0 var(--g-spacing-3x-small) var(--g-color-white);
+  --g-focus-secondary: 0 0 0 var(--g-spacing-3x-small) var(--g-color-grey), inset 0 0 0 var(--g-spacing-3x-small) var(--g-color-white);
+  --g-focus-danger: 0 0 0 var(--g-spacing-3x-small) var(--g-color-red-400), inset 0 0 0 var(--g-spacing-3x-small) var(--g-color-white);
+  --g-focus-cta: 0 0 0 var(--g-spacing-3x-small) var(--g-color-orange-400), inset 0 0 0 var(--g-spacing-3x-small) var(--g-color-white);
+  --g-focus-dark: 0 0 0 var(--g-spacing-3x-small) var(--g-color-black-900), inset 0 0 0 var(--g-spacing-3x-small) var(--g-color-white);
+
+  /* Animation */
+  --g-animation-transition: 0.2s ease-in-out;
+
+  /* Container */
+  --g-container-max-width: 120rem; /* 1920px */
+  --g-container-narrow-max-width: 18rem; /* 1280px */
+
+  /*TODO: Custom component styles that apply globaly - this is a nice way to keep things in 1 spot for special occasions -- Here are some examples. 
+  /* PagePreviewCard */
+  --g-page-preview-card-width: 27rem;
+  --g-page-preview-card-height: 14rem;
+
+  /* SideBar */
+  --c-sidebar-max-width: 38rem;
+
+  /* Text box */
+  --g-text-box-width: 30rem;
+
+  /* Tooltip */
+  --g-tooltip-text-box-width: 15rem;
+
+  /* ToggleSwitch */
+  --g-toggle-switch-translate-x: 1.75rem;
+
+  /* Box Shadow */
+  --g-dropdown-box-shadow: 0 var(--g-spacing-3x-small) var(--g-spacing-x-small) 0 rgba(0, 42, 76, 0.15);
+
+  /* Header */
+  --g-header-background: transparent linear-gradient(65deg, #173567 0%, #972868 68%);
+
+  /* 6. Breakpoints  */
+  --g-size-small: 48em; /* 768px */
+  --g-size-large: 80em; /* 1280px */
+  --g-size-medium: 64em; /* 1024px */
+
+  /* 7. Margin */
+  --g-margin-0-auto: 0 auto;
+
+  /* 8. Transitions */
+  --g-transition-time: 0.3s;
 }
+
+/* TODO: JACK!! GROOM THIS TO BE LEY ORIENTATED - I have configured this to be a template with examples and have kept your white and black variables 
+
+/* COLOURS
+All Colours  ............................  red, green, blue, etc.
+Brand colours ...........................  Primary / Secondary / Tertiary.
+Accents / Neutral colours ...............  black / white / greys, and shades.
+Utility colours ......................... success, warning, info, danger etc.
+
+TYPOGRAPHY
+Font families ........................... Arial / Roboto etc.
+Font sizes .............................. --g-font-size: 1rem / --g-font-size-small: 1rem, etc.
+Font weights ............................ --g-font-weight: 400 / --g-font-weight-semibold: 600, etc.
+
+SPACING
+Spacing ................................. --g-spacing: 1rem etc.
+
+Z-INDEX
+Z Index ................................. --g-z-underneath: -1; etc.
+
+Cosmetics
+Border  ................................. --g-border-primary: 0.05rem solid var(--g-color-grey, #e4e4e3);
+Focus  ................................. --g-focus-primary: 0 0 0 var(--g-spacing-3x-small) var(--g-color-blue-200), inset 0 0 0 var(--g-spacing-3x-small) var(--g-color-white); //box-shadow: var(--g-focus-primary)
+
+BREAKPOINTS
+Breakpoints ............................. --g-size-md: 48em;  // 768px --g-size-md: 64em; // 1024em --g-size-md: 80em; // 1280em
+
+Margin
+Margins ................................. --g-margin-0-auto: even margin on both sides
+
+Transition
+Transitions .............................  --g-transition-time: 0.3s transition of 3 seconds
+*/
