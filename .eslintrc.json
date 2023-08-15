@@ -105,7 +105,7 @@
     ],
     "@next/next/no-img-element": ["warn"],
     "@typescript-eslint/indent": ["warn", 2],
-    "@typescript-eslint/explicit-module-boundary-types": ["warn"],
+    "@typescript-eslint/explicit-module-boundary-types": ["off"],
     "@typescript-eslint/member-ordering": [
       "warn",
       {

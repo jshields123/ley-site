@@ -2,7 +2,7 @@
 
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "./",
     "typeRoots": ["./node_modules/@types", "./interfaces/common"],
     "paths": {
       "@/*": ["./*"]
@@ -37,6 +37,7 @@
     ]
   },
   "include": [
+    "next.config.js",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
