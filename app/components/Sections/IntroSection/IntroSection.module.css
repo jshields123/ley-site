@@ -2,6 +2,13 @@
   width: var(--mob-width);
 }
 
+@media (min-width: 768px) {
+  .intro_container {
+    width: var(--desk-width);
+  }
+}
+
+
 .nav {
   position: absolute;
   top: 0;

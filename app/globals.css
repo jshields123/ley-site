@@ -1,5 +1,7 @@
 :root {
   --white-color: rgb(248, 245, 245);
   --black-color: rgb(0, 0, 0);
-  --mob-width: 22rem;
+  --mob-width: 22em;
+  --tab-width: 44em;
+  --desk-width: 64em;
 }

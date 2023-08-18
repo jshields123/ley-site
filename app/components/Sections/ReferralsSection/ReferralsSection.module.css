@@ -15,8 +15,15 @@
     flex-direction: column;
     align-items: center;
   }
+
+}
+
+.referral_container {
+  width: var(--mob-width);
+}
+@media (min-width: 768px) {
   .referral_container {
-    width: var(--mob-width);
+    width: var(--desk-width);
   }
 }
 

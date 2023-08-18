@@ -9,14 +9,18 @@
   place-items: center;
   align-items: center;
   min-height: 100vh;
-  /* NEED TO GIVE THIS WIDTH A MEDIA QUERY. */
   width: var(--mob-width);
   background-color: var(--black-color);
 }
 
-@media (max-width: 40em) {
-  /*  */
+@media (min-width: 768px) {
+  .container {
+    width: var(--desk-width);
+  }
 }
+  
+
+
 
 @keyframes fadeInDown {
   from {
