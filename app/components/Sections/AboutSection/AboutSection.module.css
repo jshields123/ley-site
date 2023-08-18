@@ -3,17 +3,13 @@
 
 .about_content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
   grid-gap: 1rem;
 }
-@media (max-width: 40em) {
-  .about_content {
-    grid-template-columns: 1fr;
-  }
-  .about_image {
-    display: flex;
-    justify-content: center;
-  }
+
+.about_image {
+  display: flex;
+  justify-content: center;
 }
 
 .image {
