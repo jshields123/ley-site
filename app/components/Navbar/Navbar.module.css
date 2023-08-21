@@ -6,10 +6,13 @@
   font-family: "Montserrat", sans-serif;
   top: 0;
   z-index: 1;
+  width: var(--mob-width);
 }
 
-@media (max-width: 40em) {
+
+@media (min-width: 768px) {
   .nav {
+    width: var(--desk-width);
   }
 }
 

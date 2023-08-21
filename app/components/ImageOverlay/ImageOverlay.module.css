@@ -29,9 +29,18 @@
 
 
 .intro__image {
-  object-fit: "cover";
+  object-fit: "contain";
   filter: grayscale(100%);
+  overflow: hidden;
 }
+
+@media (max-width: 40rem) {
+  .intro__image {
+    height: 36% !important;
+  }
+}
+  
+
 
 .form__image {
   object-fit: "cover";
