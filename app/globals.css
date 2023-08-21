@@ -216,6 +216,9 @@
   /* Header */
   --g-header-background: transparent linear-gradient(65deg, #173567 0%, #972868 68%);
 
+  /* Mobile */
+  --mob-width: 22rem;
+
   /* 6. Breakpoints  */
   --g-size-small: 48em; /* 768px */
   --g-size-large: 80em; /* 1280px */
