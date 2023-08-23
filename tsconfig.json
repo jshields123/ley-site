@@ -1,11 +1,15 @@
 // TODO: If you run into any import issues with next for global files add the path to the typeRoots array like so: "typeRoots": [ "./interfaces/common"]
-
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "typeRoots": ["./node_modules/@types", "./interfaces/common"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./interfaces/common"
+    ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": [
+        "./*"
+      ]
     },
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
@@ -17,7 +21,11 @@
     "incremental": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -47,5 +55,7 @@
     "app/api/contact/route.js",
     "public/font_animation.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }

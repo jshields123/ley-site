@@ -7,10 +7,6 @@ module.exports = {
     DB_PASSWORD: process.env.DB_PASSWORD,
     MONGODB_URI: process.env.MONGODB_URI,
   },
-  images: {
-    loader: 'akamai',
-    path: '/',
-  },
   productionBrowserSourceMaps: true,
   reactStrictMode: true,
   swcMinify: true,
