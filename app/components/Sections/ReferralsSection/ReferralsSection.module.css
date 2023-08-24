@@ -1,10 +1,8 @@
-.referral_content {
+.referral_container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-  place-items: center;
-  align-items: center;
+  grid-gap: 10rem;
 }
+
 @media (max-width: 40rem) {
   .referral_content {
     grid-template-columns: 1fr;
@@ -25,20 +23,22 @@
   }
 }
 
-.referral_single:first-of-type {
+.referral_single {
   align-items: center;
   display: flex;
-  flex-direction: column;
   flex-wrap: nowrap;
   flex-grow: 1;
+  flex-direction: column;
 }
 
-.referral_single:nth-of-type(2) {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  flex-grow: 1;
+@media (min-width: 768px) {
+  .referral_single:first-of-type {
+    flex-direction: row-reverse;
+  }
+
+  .referral_single:nth-of-type(2) {
+    flex-direction: row;
+  }
 }
 
 .another_random_lady {
