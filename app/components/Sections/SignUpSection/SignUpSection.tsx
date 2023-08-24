@@ -4,13 +4,13 @@ import { ImageOverlay } from '../../ImageOverlay';
 
 const SignUpSection = () => {
   return (
-    <>
-      <ImageOverlay imageSrc={'/images/meeting.jpg'} alt={'business meeting'} type={'form'}>
+    <div className={styles.signup_container}>
+      <ImageOverlay imageSrc={'/images/business-meeting.jpeg'} alt={'business meeting'} type={'form'}>
         <div className={styles.overlay}>
           <FormCard />
         </div>
       </ImageOverlay>
-    </>
+    </div>
   );
 };
 
