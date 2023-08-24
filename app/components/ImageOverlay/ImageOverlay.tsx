@@ -20,9 +20,8 @@ const ImageOverlay = ({ children, imageSrc, alt, type, shouldHavePriority, isMob
         fill={isMobile ? undefined : true}
         className={`${type}__image`}
         priority={shouldHavePriority ? true : undefined}
-        style={{ objectFit: 'cover' }}
-        height={isMobile ? 1080 : undefined}
-        width={isMobile ? 1920 : undefined}
+        height={isMobile ? 300 : undefined}
+        width={isMobile ? 500 : undefined}
       />
       <div className={styles.overlay}>{children}</div>
     </div>

@@ -5,8 +5,6 @@
   overflow: hidden;
 }
 
-
-
 .overlay {
   position: absolute;
   top: 0;
@@ -22,18 +20,18 @@
 }
 
 @media (min-width: 768px) {
-  .container, .overlay {
+  .container,
+  .overlay {
     width: var(--desk-width);
   }
 }
 
-
 .intro__image {
-  object-fit: "cover";
+  object-fit: 'cover';
   filter: grayscale(100%);
 }
 
 .form__image {
-  object-fit: "cover";
+  object-fit: 'cover';
   filter: grayscale(100%);
 }

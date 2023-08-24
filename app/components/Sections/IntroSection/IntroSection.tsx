@@ -5,9 +5,15 @@ import { SubTitle } from '../../SubTitle';
 import { Button } from '../../Button/Button';
 import { Navbar } from '../../Navbar/Navbar';
 import { TertiaryTitle } from '../../TertiaryTitle';
+import { useEffect, useState } from 'react';
 
 const IntroSection = () => {
-  const isMobile = window.innerWidth <= 768;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const newIsMobile = window.innerWidth <= 768;
+    setIsMobile(newIsMobile);
+  }, []);
   const onClick = () => {
     window.open('tel:+610431471512');
   };
