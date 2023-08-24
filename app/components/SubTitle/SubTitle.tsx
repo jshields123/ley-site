@@ -1,4 +1,4 @@
-import styles from "./SubTitle.module.css";
+import styles from './SubTitle.module.css';
 
 interface SubTitleProps {
   text: string;

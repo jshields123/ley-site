@@ -10,16 +10,7 @@ const EmailIcon = () => (
     height="25"
   >
     <defs>
-      <marker
-        id="ArrowEnd"
-        markerHeight="3"
-        markerUnits="strokeWidth"
-        markerWidth="4"
-        orient="auto"
-        refX="0"
-        refY="5"
-        viewBox="0 0 10 10"
-      >
+      <marker id="ArrowEnd" markerHeight="3" markerUnits="strokeWidth" markerWidth="4" orient="auto" refX="0" refY="5" viewBox="0 0 10 10">
         <path d="M 0,0 L 10,5 L 0,10 L 0,0 z" id="path1397" />
       </marker>
       <marker
@@ -40,8 +31,8 @@ const EmailIcon = () => (
         <path
           d="M 140.865,32.943 C 99.53,32.943 76.294,54.314 76.294,97.979 L 76.294,548.101 C 76.294,588.944 97.185,610.329 138.486,610.329 L 590.51,610.329 C 631.813,610.329 652.736,590.009 652.736,548.101 L 652.736,97.979 C 652.736,55.379 631.813,32.943 589.213,32.943 C 589.213,32.943 140.722,32.801 140.865,32.943 z"
           style={{
-            fill: "rgb(248, 245, 245)",
-            stroke: "#686565",
+            fill: 'rgb(248, 245, 245)',
+            stroke: '#686565',
             strokeWidth: 3.408,
           }}
         />

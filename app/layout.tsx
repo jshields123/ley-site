@@ -1,8 +1,8 @@
-import { ReactNode } from "react";
-import { Inter } from "next/font/google";
-import styles from "./layout.module.css";
+import { ReactNode } from 'react';
+import { Inter } from 'next/font/google';
+import styles from './layout.module.css';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 interface LayoutProps {
   children: ReactNode;

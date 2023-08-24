@@ -1,21 +1,15 @@
-"use client";
-import styles from "./page.module.css";
-import "./globals.css";
-import { Montserrat } from "next/font/google";
-import Layout from "./layout";
-import {
-  Footer,
-  ReferralsSection,
-  SignUpSection,
-  IntroSection,
-  AboutSection,
-} from "./components";
-import { useEffect } from "react";
-import { ServicesSection } from "./components/Sections";
+'use client';
+import styles from './page.module.css';
+import './globals.css';
+import { Montserrat } from 'next/font/google';
+import Layout from './layout';
+import { Footer, ReferralsSection, SignUpSection, IntroSection, AboutSection } from './components';
+import { useEffect } from 'react';
+import { ServicesSection } from './components/Sections';
 
 const hind = Montserrat({
-  subsets: ["latin"],
-  weight: "300",
+  subsets: ['latin'],
+  weight: '300',
 });
 
 export default function Home() {
@@ -56,7 +50,7 @@ export default function Home() {
           <div className={`${styles.container} ${styles.hidden}`}>
             <SignUpSection />
           </div>
-          <Footer text={"2023 LEY. All rights reserved."} />
+          <Footer text={'2023 LEY. All rights reserved.'} />
         </main>
       </Layout>
     </>

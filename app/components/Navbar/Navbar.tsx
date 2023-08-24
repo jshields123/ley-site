@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { Logo } from "../Logo/Logo";
-import styles from "./Navbar.module.css";
-import { NAVBAR_ITEMS } from "./Navbar.constants";
+import Link from 'next/link';
+import { Logo } from '../Logo/Logo';
+import styles from './Navbar.module.css';
+import { NAVBAR_ITEMS } from './Navbar.constants';
 
 const Navbar = () => {
   return (

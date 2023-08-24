@@ -1,4 +1,4 @@
-import styles from "./TertiaryTitle.module.css";
+import styles from './TertiaryTitle.module.css';
 
 interface TertiaryTitleProps {
   text: string;

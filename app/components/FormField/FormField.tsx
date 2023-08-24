@@ -1,4 +1,4 @@
-import styles from "./FormField.module.css";
+import styles from './FormField.module.css';
 
 export interface FormFieldProps {
   label: string;
@@ -8,25 +8,13 @@ export interface FormFieldProps {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const FormField: React.FC<FormFieldProps> = ({
-  label,
-  id,
-  value,
-  type = "text",
-  onChange,
-}: FormFieldProps) => {
+const FormField: React.FC<FormFieldProps> = ({ label, id, value, type = 'text', onChange }: FormFieldProps) => {
   return (
     <>
       <label className={styles.label} htmlFor={id}>
         {label}
       </label>
-      <input
-        className={styles.input}
-        type={type}
-        id={id}
-        value={value}
-        onChange={onChange}
-      />
+      <input className={styles.input} type={type} id={id} value={value} onChange={onChange} />
     </>
   );
 };
