@@ -1,14 +1,7 @@
 import styles from './FormField.module.css';
+import { FormFieldProps } from './FormField.interfaces';
 
-export interface FormFieldProps {
-  label: string;
-  id: string;
-  value: string;
-  type?: string;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
-}
-
-const FormField: React.FC<FormFieldProps> = ({ label, id, value, type = 'text', onChange }: FormFieldProps) => {
+const FormField = ({ label, id, value, type = 'text', onChange }: FormFieldProps) => {
   return (
     <>
       <label className={styles.label} htmlFor={id}>

@@ -1,8 +1,5 @@
 import styles from './SubTitle.module.css';
-
-interface SubTitleProps {
-  text: string;
-}
+import { SubTitleProps } from './SubTitle.interfaces';
 
 const SubTitle = ({ text }: SubTitleProps) => {
   return (

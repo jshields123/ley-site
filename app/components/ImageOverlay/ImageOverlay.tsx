@@ -1,15 +1,7 @@
 import styles from './ImageOverlay.module.css';
-import { ReactNode } from 'react';
-import Image from 'next/image';
 
-interface ImageOverlayProps {
-  alt: string;
-  children: string | ReactNode;
-  imageSrc: string;
-  isMobile?: boolean;
-  shouldHavePriority?: boolean;
-  type: string;
-}
+import Image from 'next/image';
+import { ImageOverlayProps } from './ImageOverlay.interfaces';
 
 const ImageOverlay = ({ children, imageSrc, alt, type, shouldHavePriority, isMobile }: ImageOverlayProps) => {
   return (

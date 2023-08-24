@@ -1,10 +1,6 @@
 import { Card } from '../Card';
 import styles from './ListCard.module.css';
-import { ListCardItem } from './ListCard.constants';
-
-interface ListCardProps {
-  items: ListCardItem[];
-}
+import { ListCardProps } from './ListCard.interfaces';
 
 const ListCard = ({ items }: ListCardProps) => {
   return (

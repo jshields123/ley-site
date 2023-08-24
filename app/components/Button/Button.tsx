@@ -1,11 +1,5 @@
-import styles from '../Button/Button.module.css';
-
-interface ButtonProps {
-  buttonText: string;
-  type: 'button' | 'submit' | 'reset';
-  isDisabled: boolean;
-  onClick?: () => void;
-}
+import styles from './Button.module.css';
+import { ButtonProps } from './Button.interfaces';
 
 const Button = ({ buttonText, type, isDisabled = false, onClick }: ButtonProps) => {
   return (

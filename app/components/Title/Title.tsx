@@ -1,8 +1,6 @@
 import styles from './Title.module.css';
 
-interface TitleProps {
-  text: string;
-}
+import { TitleProps } from './Title.interfaces';
 
 const Title = ({ text }: TitleProps) => {
   return (

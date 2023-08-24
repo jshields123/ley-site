@@ -1,9 +1,6 @@
 import styles from './TextCard.module.css';
 import { Card } from '../Card';
-
-interface TextCardProps {
-  text: string;
-}
+import { TextCardProps } from './TextCard.interfaces';
 
 const TextCard = ({ text }: TextCardProps) => {
   return (

@@ -1,4 +1,3 @@
-import { TextCard } from '../../Cards';
 import { ListCard } from '../../Cards/ListCard/ListCard';
 import { SubTitle } from '../../SubTitle';
 import styles from './ServicesSection.module.css';

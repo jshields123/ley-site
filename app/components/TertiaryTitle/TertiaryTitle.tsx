@@ -1,8 +1,5 @@
 import styles from './TertiaryTitle.module.css';
-
-interface TertiaryTitleProps {
-  text: string;
-}
+import { TertiaryTitleProps } from './TertiaryTitle.interfaces';
 
 const TertiaryTitle = ({ text }: TertiaryTitleProps) => {
   return (

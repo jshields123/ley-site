@@ -1,8 +1,5 @@
 import styles from './Footer.module.css';
-
-interface FooterProps {
-  text: string;
-}
+import { FooterProps } from './Footer.interfaces';
 
 const Footer = ({ text }: FooterProps) => {
   return (
