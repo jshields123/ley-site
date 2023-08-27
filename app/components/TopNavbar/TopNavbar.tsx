@@ -1,7 +1,6 @@
-import Link from 'next/link';
 import { Logo } from '../Logo/Logo';
 import styles from './TopNavbar.module.css';
-import { NAVBAR_ITEMS } from '../../utils/constants/Navbar.constants';
+import { NAVBAR_ITEMS } from '../../utils/common/constants/Navbar.constants';
 
 interface TopNavbarProps {
   isMobile: boolean;
@@ -17,12 +16,12 @@ const TopNavbar = ({ isMobile }: TopNavbarProps) => {
           <>
             <Logo />
             <ul className={styles.ul}>
-              {NAVBAR_ITEMS.map(({ linkHref, Icon }) => {
+              {NAVBAR_ITEMS.map(({ id, linkHref, Icon, onClick }) => {
                 return (
-                  <li key={linkHref} className={styles.li}>
-                    <Link className={styles.link} href={linkHref}>
+                  <li key={id} className={styles.li}>
+                    <a className={styles.link} href={linkHref} onClick={onClick}>
                       {Icon}
-                    </Link>
+                    </a>
                   </li>
                 );
               })}

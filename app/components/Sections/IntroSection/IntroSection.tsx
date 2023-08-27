@@ -7,6 +7,7 @@ import { TopNavbar } from '../../TopNavbar/TopNavbar';
 import { TertiaryTitle } from '../../TertiaryTitle';
 import { useEffect, useState } from 'react';
 import { LowerNavbar } from '../../LowerNavbar';
+import { onClickToCall } from '@/app/utils/common/functions/clickToCall';
 
 const IntroSection = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -15,9 +16,7 @@ const IntroSection = () => {
     const newIsMobile = window.innerWidth <= 768;
     setIsMobile(newIsMobile);
   }, []);
-  const onClick = () => {
-    window.open('tel:+610431471512');
-  };
+
   return (
     <div className={styles.intro_container}>
       <ImageOverlay imageSrc={'/images/lauren1.jpeg'} alt={'lauren'} type={'intro'} shouldHavePriority={true} isMobile={isMobile}>
@@ -30,7 +29,9 @@ const IntroSection = () => {
             <SubTitle text={'Empowering Professionals, Elevating Businesses'} />
             <TertiaryTitle text={'Your trusted partner for recruitment services, sales consulting and HR software consulting'} />
             <div className={styles.button}>
-              <Button buttonText={'Call now'} type={'button'} isDisabled={false} onClick={onClick} />
+              <Button type={'button'} isDisabled={false} onClick={onClickToCall}>
+                {'Call now'}
+              </Button>
             </div>
           </div>
           {isMobile ? <LowerNavbar /> : <></>}

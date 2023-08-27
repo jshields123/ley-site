@@ -1,18 +1,18 @@
 import Link from 'next/link';
 import styles from './LowerNavbar.module.css';
-import { NAVBAR_ITEMS } from '../../utils/constants/Navbar.constants';
+import { NAVBAR_ITEMS } from '../../utils/common/constants/Navbar.constants';
 
 const LowerNavbar = () => {
   return (
     <div>
       <nav className={styles.nav}>
         <ul className={styles.ul}>
-          {NAVBAR_ITEMS.map(({ linkHref, Icon }) => {
+          {NAVBAR_ITEMS.map(({ id, onClick, linkHref, Icon }) => {
             return (
-              <li key={linkHref} className={styles.li}>
-                <Link className={styles.link} href={linkHref}>
+              <li key={id} className={styles.li}>
+                <a className={styles.link} href={linkHref} onClick={onClick}>
                   {Icon}
-                </Link>
+                </a>
               </li>
             );
           })}
