@@ -3,9 +3,10 @@ import { ImageOverlay } from '../../ImageOverlay/ImageOverlay';
 import { Title } from '../../Title/Title';
 import { SubTitle } from '../../SubTitle';
 import { Button } from '../../Button/Button';
-import { Navbar } from '../../Navbar/Navbar';
+import { TopNavbar } from '../../TopNavbar/TopNavbar';
 import { TertiaryTitle } from '../../TertiaryTitle';
 import { useEffect, useState } from 'react';
+import { LowerNavbar } from '../../LowerNavbar';
 
 const IntroSection = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -22,7 +23,7 @@ const IntroSection = () => {
       <ImageOverlay imageSrc={'/images/lauren1.jpeg'} alt={'lauren'} type={'intro'} shouldHavePriority={true} isMobile={isMobile}>
         <div className={styles.overlay}>
           <div className={styles.nav}>
-            <Navbar />
+            <TopNavbar isMobile={isMobile} />
           </div>
           <div className={styles.intro_text}>
             <Title text={'LEY Consulting'} />
@@ -32,6 +33,7 @@ const IntroSection = () => {
               <Button buttonText={'Call now'} type={'button'} isDisabled={false} onClick={onClick} />
             </div>
           </div>
+          {isMobile ? <LowerNavbar /> : <></>}
         </div>
       </ImageOverlay>
     </div>

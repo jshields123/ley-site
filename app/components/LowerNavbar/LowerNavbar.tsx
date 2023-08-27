@@ -1,13 +1,11 @@
 import Link from 'next/link';
-import { Logo } from '../Logo/Logo';
-import styles from './Navbar.module.css';
-import { NAVBAR_ITEMS } from './Navbar.constants';
+import styles from './LowerNavbar.module.css';
+import { NAVBAR_ITEMS } from '../../utils/constants/Navbar.constants';
 
-const Navbar = () => {
+const LowerNavbar = () => {
   return (
     <div>
       <nav className={styles.nav}>
-        <Logo />
         <ul className={styles.ul}>
           {NAVBAR_ITEMS.map(({ linkHref, Icon }) => {
             return (
@@ -24,4 +22,4 @@ const Navbar = () => {
   );
 };
 
-export { Navbar };
+export { LowerNavbar };
