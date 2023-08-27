@@ -1,10 +1,10 @@
 import styles from './Button.module.css';
 import { ButtonProps } from './Button.interfaces';
 
-const Button = ({ buttonText, type, isDisabled = false, onClick }: ButtonProps) => {
+const Button = ({ children, type, isDisabled = false, onClick }: ButtonProps) => {
   return (
     <button className={styles.button} type={type} disabled={isDisabled} onClick={onClick}>
-      {buttonText}
+      {children}
     </button>
   );
 };

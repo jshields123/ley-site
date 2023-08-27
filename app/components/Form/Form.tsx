@@ -13,9 +13,11 @@ const Form = () => {
   const [phone, setPhone] = useState<string>('');
   const [email, setEmail] = useState<string>('');
   const [error, setError] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setLoading(true);
 
     console.log(firstName, lastName, company, phone, email);
 
@@ -29,19 +31,29 @@ const Form = () => {
     const { msg } = await res.json();
     setError(msg);
     console.log(error);
+    setLoading(false);
+    if (res.ok) {
+      setFirstName('');
+      setLastName('');
+      setCompany('');
+      setPhone('');
+      setEmail('');
+    }
   };
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      <FormField label={'First Name*:'} id={'first'} value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-      <FormField label={'Last Name:'} id={'last'} value={lastName} onChange={(e) => setLastName(e.target.value)} />
-      <FormField label={'Company:'} id={'company'} value={company} onChange={(e) => setCompany(e.target.value)} />
-      <FormField label={'Phone*:'} id={'phone'} value={phone} type="number" onChange={(e) => setPhone(e.target.value)} />
-      <FormField label={'Email*:'} id={'email'} value={email} type="email" onChange={(e) => setEmail(e.target.value)} />
+      <FormField label={'First Name*:'} id={'first'} value={firstName} onChange={(event) => setFirstName(event.target.value)} />
+      <FormField label={'Last Name:'} id={'last'} value={lastName} onChange={(event) => setLastName(event.target.value)} />
+      <FormField label={'Company:'} id={'company'} value={company} onChange={(event) => setCompany(event.target.value)} />
+      <FormField label={'Phone*:'} id={'phone'} value={phone} type="number" onChange={(event) => setPhone(event.target.value)} />
+      <FormField label={'Email*:'} id={'email'} value={email} type="email" onChange={(event) => setEmail(event.target.value)} />
       <label className={styles.button_label} htmlFor="submit">
         Submit
       </label>
       <div className={styles.button_container}>
-        <Button buttonText={'Submit'} type={'submit'} isDisabled={false} />
+        <Button type={'submit'} isDisabled={false}>
+          {loading ? 'Loading...' : 'Submit'}
+        </Button>
       </div>
     </form>
   );
