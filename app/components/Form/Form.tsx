@@ -1,11 +1,13 @@
 'use client';
 
 import { FormField } from '../FormField';
-import { IUser } from './Form.interfaces';
+import { IUser } from '../../interfaces/common/common.interfaces';
 
 import styles from './Form.module.css';
 import { FormEvent, useState } from 'react';
 import { Button } from '../Button/Button';
+// import { autoSendAdminNewContactEmail } from '../../api/contact/autoSendAdminNewContactEmail';
+// import { autoSendWelcomeEmailToUser } from '../../api/contact/autoSendNewUserEmail';
 
 const Form = () => {
   const [firstName, setFirstName] = useState<IUser['firstName']>('');
@@ -20,27 +22,45 @@ const Form = () => {
     event.preventDefault();
     setLoading(true);
 
-    console.log(firstName, lastName, company, phone, email);
+    const user: IUser = {
+      firstName,
+      lastName,
+      email,
+      phone,
+      company,
+    };
 
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ firstName, lastName, company, phone, email }),
-    });
-    const { msg } = await res.json();
-    setError(msg);
-    console.log(error);
-    setLoading(false);
-    if (res.ok) {
-      setFirstName('');
-      setLastName('');
-      setCompany('');
-      setPhone('');
-      setEmail('');
+    console.log(firstName, lastName, company, phone, email);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user),
+      });
+
+      if (res.ok) {
+        // await autoSendWelcomeEmailToUser(user);
+        // await autoSendAdminNewContactEmail(user);
+
+        setFirstName('');
+        setLastName('');
+        setCompany('');
+        setPhone('');
+        setEmail('');
+      } else {
+        const { msg } = await res.json();
+        setError(msg);
+        console.log('error adding details to db');
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
     }
   };
+
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
       <FormField
