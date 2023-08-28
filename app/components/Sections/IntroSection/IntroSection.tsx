@@ -34,9 +34,9 @@ const IntroSection = () => {
               </Button>
             </div>
           </div>
-          {isMobile ? <LowerNavbar /> : <></>}
         </div>
       </ImageOverlay>
+      {isMobile ? <LowerNavbar /> : <></>}
     </div>
   );
 };

@@ -14,8 +14,8 @@ interface NavbarItem {
 }
 
 export const NAVBAR_ITEMS: NavbarItem[] = [
-  { Icon: <PhoneIcon />, onClick: () => onClickToCall, id: 'phone' },
-  { Icon: <EmailIcon />, onClick: () => onClickToEmail, id: 'email' },
+  { Icon: <PhoneIcon />, onClick: onClickToCall, id: 'phone' },
+  { Icon: <EmailIcon />, onClick: onClickToEmail, id: 'email' },
   { linkHref: '/instagram', Icon: <InstagramIcon />, id: 'instagram' },
-  { linkHref: '/linkedIn', Icon: <LinkedInIcon />, id: 'linkedIn' },
+  { linkHref: 'https://www.linkedin.com/in/laureneyates/', Icon: <LinkedInIcon />, id: 'linkedIn' },
 ];
