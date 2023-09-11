@@ -1,6 +1,6 @@
 import { Schema, Document, Model, model } from 'mongoose';
 
-interface IContact extends Document {
+interface IContact {
   firstName: string;
   lastName: string;
   email: string;
