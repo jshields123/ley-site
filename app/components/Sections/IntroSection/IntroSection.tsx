@@ -7,7 +7,7 @@ import { TopNavbar } from '../../TopNavbar/TopNavbar';
 import { TertiaryTitle } from '../../TertiaryTitle';
 import { useEffect, useState } from 'react';
 import { LowerNavbar } from '../../LowerNavbar';
-import { onClickToCall } from '@/app/utils/common/functions/clickToCall';
+import { onClickToCall } from '@/app/utils/common/functions/onClickToCall';
 
 const IntroSection = () => {
   const [isMobile, setIsMobile] = useState(false);
