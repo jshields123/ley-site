@@ -1,7 +1,7 @@
 'use client';
 
 import { FormField } from '../FormField';
-import { IContact } from 'app/models/contact';
+import { IContact } from '../../interfaces/common';
 
 import styles from './Form.module.css';
 import { FormEvent, useState } from 'react';
@@ -10,7 +10,7 @@ import { Button } from '../Button/Button';
 const Form = () => {
   const [firstName, setFirstName] = useState<IContact['firstName']>('');
   const [lastName, setLastName] = useState<IContact['lastName']>('');
-  const [company, setCompany] = useState<IContact['company']>('');
+  const [company, setCompany] = useState<IContact['company']>();
   const [phone, setPhone] = useState<IContact['phone']>('');
   const [email, setEmail] = useState<IContact['email']>('');
   const [error, setError] = useState<string>('');
@@ -29,45 +29,27 @@ const Form = () => {
     };
 
     console.log(firstName, lastName, company, phone, email);
+
     try {
-      try {
-        console.log(contact);
-        const res = await fetch('/api/send', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(contact),
-        });
-        if (res.ok) {
-          console.log('email sent');
-        } else {
-          const { msg } = await res.json();
-          setError(msg);
-          console.log('error sending email');
-        }
-      } catch (error) {
-        console.log(error);
-      }
       console.log(contact);
-      const res = await fetch('/api/contact', {
+      const res = await fetch('/api/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(contact),
       });
-
       if (res.ok) {
         setFirstName('');
         setLastName('');
         setCompany('');
         setPhone('');
         setEmail('');
+        console.log('email sent');
       } else {
         const { msg } = await res.json();
         setError(msg);
-        console.log('error adding details to db');
+        console.log('error sending email');
       }
     } catch (error) {
       console.log(error);
@@ -86,7 +68,7 @@ const Form = () => {
         onChange={(event) => setFirstName(event.target.value)}
       />
       <FormField label={'Last Name:*'} id={'last'} value={lastName} onChange={(event) => setLastName(event.target.value)} required={true} />
-      <FormField label={'Company:'} id={'company'} value={company} onChange={(event) => setCompany(event.target.value)} />
+      <FormField label={'Company:'} id={'company'} value={!company ? '' : company} onChange={(event) => setCompany(event.target.value)} />
       <FormField
         label={'Phone*:'}
         id={'phone'}
