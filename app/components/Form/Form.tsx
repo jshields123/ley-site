@@ -1,20 +1,18 @@
 'use client';
 
 import { FormField } from '../FormField';
-import { IUser } from '../../interfaces/common/common.interfaces';
+import { IContact } from 'app/models/contact';
 
 import styles from './Form.module.css';
 import { FormEvent, useState } from 'react';
 import { Button } from '../Button/Button';
-// import { autoSendAdminNewContactEmail } from '../../api/contact/autoSendAdminNewContactEmail';
-// import { autoSendWelcomeEmailToUser } from '../../api/contact/autoSendNewUserEmail';
 
 const Form = () => {
-  const [firstName, setFirstName] = useState<IUser['firstName']>('');
-  const [lastName, setLastName] = useState<IUser['lastName']>('');
-  const [company, setCompany] = useState<IUser['company']>('');
-  const [phone, setPhone] = useState<IUser['phone']>('');
-  const [email, setEmail] = useState<IUser['email']>('');
+  const [firstName, setFirstName] = useState<IContact['firstName']>('');
+  const [lastName, setLastName] = useState<IContact['lastName']>('');
+  const [company, setCompany] = useState<IContact['company']>('');
+  const [phone, setPhone] = useState<IContact['phone']>('');
+  const [email, setEmail] = useState<IContact['email']>('');
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
 
@@ -22,7 +20,7 @@ const Form = () => {
     event.preventDefault();
     setLoading(true);
 
-    const user: IUser = {
+    const contact: IContact = {
       firstName,
       lastName,
       email,
@@ -32,18 +30,35 @@ const Form = () => {
 
     console.log(firstName, lastName, company, phone, email);
     try {
+      try {
+        console.log(contact);
+        const res = await fetch('/api/send', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(contact),
+        });
+        if (res.ok) {
+          console.log('email sent');
+        } else {
+          const { msg } = await res.json();
+          setError(msg);
+          console.log('error sending email');
+        }
+      } catch (error) {
+        console.log(error);
+      }
+      console.log(contact);
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(user),
+        body: JSON.stringify(contact),
       });
 
       if (res.ok) {
-        // await autoSendWelcomeEmailToUser(user);
-        // await autoSendAdminNewContactEmail(user);
-
         setFirstName('');
         setLastName('');
         setCompany('');
@@ -70,7 +85,7 @@ const Form = () => {
         value={firstName}
         onChange={(event) => setFirstName(event.target.value)}
       />
-      <FormField label={'Last Name:'} id={'last'} value={lastName} onChange={(event) => setLastName(event.target.value)} />
+      <FormField label={'Last Name:*'} id={'last'} value={lastName} onChange={(event) => setLastName(event.target.value)} required={true} />
       <FormField label={'Company:'} id={'company'} value={company} onChange={(event) => setCompany(event.target.value)} />
       <FormField
         label={'Phone*:'}

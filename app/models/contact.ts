@@ -1,15 +1,15 @@
 import { Schema, Document, Model, model } from 'mongoose';
 
-interface IContact {
+export interface IContact {
   firstName: string;
   lastName: string;
   email: string;
   phone: string;
-  company?: string;
+  company: string;
   createdAt?: Date;
 }
 
-const contactSchema = new Schema<IContact>({
+const contactSchema = new Schema<any>({
   firstName: { type: String, required: [true, 'First name is required'] },
   lastName: { type: String, required: [true, 'Last name is required'] },
   email: {
@@ -22,6 +22,4 @@ const contactSchema = new Schema<IContact>({
   createdAt: { type: Date, default: Date.now },
 });
 
-const Contact: Model<IContact> = model<IContact>('Contact', contactSchema);
-
-export default Contact;
+export const Contact: Model<any> = model<any>('Contact', contactSchema);

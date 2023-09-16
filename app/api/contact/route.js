@@ -1,7 +1,7 @@
-import { connectDB } from "app/lib/mongodb";
-import { NextResponse } from "next/server";
-import Contact from "app/models/contact";
-import mongoose from "mongoose";
+import { connectDB } from 'app/lib/mongodb';
+import { NextResponse } from 'next/server';
+import { Contact } from 'app/models/contact';
+import mongoose from 'mongoose';
 
 export async function POST(req) {
   const { firstName, lastName, company, phone, email } = await req.json();
@@ -17,7 +17,7 @@ export async function POST(req) {
       email,
     });
 
-    return NextResponse.json({ msg: ["success"], success: true });
+    return NextResponse.json({ msg: ['success'], success: true });
   } catch (error) {
     if (error instanceof mongoose.Error.ValidationError) {
       let errors = [];
@@ -26,7 +26,7 @@ export async function POST(req) {
       }
       return NextResponse.json({ msg: errors });
     } else {
-      return NextResponse.json({ msg: ["unable to send message"] });
+      return NextResponse.json({ msg: ['unable to send message'] });
     }
   }
 }
