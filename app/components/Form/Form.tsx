@@ -10,7 +10,7 @@ import { Button } from '../Button/Button';
 const Form = () => {
   const [firstName, setFirstName] = useState<IContact['firstName']>('');
   const [lastName, setLastName] = useState<IContact['lastName']>('');
-  const [company, setCompany] = useState<IContact['company']>();
+  const [company, setCompany] = useState<IContact['company']>('');
   const [phone, setPhone] = useState<IContact['phone']>('');
   const [email, setEmail] = useState<IContact['email']>('');
   const [error, setError] = useState<string>('');
@@ -20,21 +20,6 @@ const Form = () => {
     event.preventDefault();
     setLoading(true);
 
-    const spreadsheetId = process.env.GOOGLE_SHEETS_ID; // Replace with your spreadsheet ID
-    const range = 'Sheet1!A1:E1'; // Specify the range where you want to append data
-    const valueInputOption = 'RAW'; // Choose an appropriate valueInputOption (e.g., RAW, USER_ENTERED)
-    const apiKey = process.env.GOOGLE_SHEETS_API_KEY; // Paste your API key here
-    const appendUrl = `https://sheets.googleapis.com/v4/spreadsheets/11BGL3T6sqrvtUdNKveqI-KnGE59N3QYkpJ2Ht5CHWd4/values/${range}:append?valueInputOption=${valueInputOption}&key=AIzaSyBi5Vix_LqvDEeJY52MLwQDygP2GsLiyqg`;
-
-    // Define the data you want to append
-    const rowData = [
-      ['TEST1', 'TEST2', 'TEST3', 'TEST4', 'TEST5'], // Replace with your data
-    ];
-
-    // Define the request body
-    const requestBody = {
-      values: rowData,
-    };
     const contact: IContact = {
       firstName,
       lastName,
@@ -43,46 +28,54 @@ const Form = () => {
       company,
     };
 
-    console.log(firstName, lastName, company, phone, email);
-
     try {
-      console.log(contact);
-      const res = await fetch('/api/send', {
+      const res = await fetch('/api/addContact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(contact),
       });
+      console.log(contact);
       if (res.ok) {
-        setFirstName('');
-        setLastName('');
-        setCompany('');
-        setPhone('');
-        setEmail('');
-        console.log('email sent');
-
-        try {
-          const res = await fetch(appendUrl, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(requestBody),
-          });
-        } catch (error) {
-          console.log(error);
-        }
+        const data = await res.json();
+        console.log('contact added', data);
       } else {
         const { msg } = await res.json();
-        setError(msg);
-        console.log('error sending email');
+        console.log('error adding contact', msg);
       }
     } catch (error) {
       console.log(error);
     } finally {
       setLoading(false);
     }
+    // try {
+    //   console.log(contact);
+    //   const res = await fetch('/api/send', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(contact),
+    //   });
+    //   if (res.ok) {
+    //     setFirstName('');
+    //     setLastName('');
+    //     setCompany('');
+    //     setPhone('');
+    //     setEmail('');
+    //     console.log('email sent');
+
+    // } else {
+    //   const { msg } = await res.json();
+    //   setError(msg);
+    //   console.log('error sending email');
+    // }
+    // } catch (error) {
+    //   console.log(error);
+    // } finally {
+    //   setLoading(false);
+    // }
   };
 
   return (
