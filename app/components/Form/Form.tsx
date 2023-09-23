@@ -29,7 +29,6 @@ const Form = () => {
       phone,
       company,
     };
-
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
@@ -41,7 +40,7 @@ const Form = () => {
       console.log(contact);
       if (res.ok) {
         const data = await res.json();
-        console.log('contact added', data);
+        alert('Details sent successfully');
       } else {
         const { msg } = await res.json();
         console.log('error adding contact', msg);
@@ -51,33 +50,32 @@ const Form = () => {
     } finally {
       setLoading(false);
     }
-    // try {
-    //   console.log(contact);
-    //   const res = await fetch('/api/send', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(contact),
-    //   });
-    //   if (res.ok) {
-    //     setFirstName('');
-    //     setLastName('');
-    //     setCompany('');
-    //     setPhone('');
-    //     setEmail('');
-    //     console.log('email sent');
-
-    // } else {
-    //   const { msg } = await res.json();
-    //   setError(msg);
-    //   console.log('error sending email');
-    // }
-    // } catch (error) {
-    //   console.log(error);
-    // } finally {
-    //   setLoading(false);
-    // }
+    try {
+      console.log(contact);
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(contact),
+      });
+      if (res.ok) {
+        setFirstName('');
+        setLastName('');
+        setCompany('');
+        setPhone('');
+        setEmail('');
+        console.log('email sent');
+      } else {
+        const { msg } = await res.json();
+        setError(msg);
+        console.log('error sending email');
+      }
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
