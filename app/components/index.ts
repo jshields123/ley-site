@@ -1,6 +1,7 @@
 export * from './Button';
 export * from './Cards';
 export * from './Carousel';
+export * from './EmailTemplate';
 export * from './Footer';
 export * from './Form';
 export * from './FormField';

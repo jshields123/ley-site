@@ -1,14 +1,9 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "typeRoots": [
-      "./node_modules/@types",
-      "./interfaces/common"
-    ],
+    "typeRoots": ["./node_modules/@types", "./interfaces/common"],
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     },
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
@@ -20,11 +15,7 @@
     "incremental": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
     "noEmit": true,
@@ -48,11 +39,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "app/api/contact/route.js",
+    "app/api/contact/route.ts",
     "public/font_animation.js",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
