@@ -20,9 +20,9 @@ const TopNavbar = ({ isMobile }: TopNavbarProps) => {
                 return (
                   <li key={id} className={styles.li}>
                     {onClick ? (
-                      <button className={styles.link} onClick={onClick} style={{ border: 'none', background: 'none', padding: 0 }}>
+                      <a className={styles.link} onClick={onClick} style={{ border: 'none', background: 'none', padding: 0 }}>
                         {Icon}
-                      </button>
+                      </a>
                     ) : (
                       <a className={styles.link} href={linkHref}>
                         {Icon}
