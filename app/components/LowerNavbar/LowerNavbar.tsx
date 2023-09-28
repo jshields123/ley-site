@@ -10,11 +10,16 @@ const LowerNavbar = () => {
             return (
               <li key={id} className={styles.li}>
                 {onClick ? (
-                  <button className={styles.link} onClick={onClick} style={{ border: 'none', background: 'none', padding: 0 }}>
+                  <button
+                    className={styles.link}
+                    onClick={onClick}
+                    style={{ border: 'none', background: 'none', padding: 0 }}
+                    aria-name={id}
+                  >
                     {Icon}
                   </button>
                 ) : (
-                  <a className={styles.link} href={linkHref}>
+                  <a className={styles.link} href={linkHref} aria-aria-label={id}>
                     {Icon}
                   </a>
                 )}
