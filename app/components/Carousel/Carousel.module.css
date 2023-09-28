@@ -8,11 +8,11 @@
 }
 
 .brands {
+  background-color: black;
   background-color: var(--white-color);
   overflow: hidden;
   padding: 2rem 0;
   white-space: nowrap;
-  background-color: black;
 }
 
 .brands:hover .brands__slide {

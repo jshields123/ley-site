@@ -1,16 +1,16 @@
 .nav {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  min-height: 5rem;
+  display: flex;
   font-family: 'Montserrat', sans-serif;
+  justify-content: space-between;
+  min-height: 5rem;
   top: 0;
   z-index: 1;
 }
 
 .logo {
-  display: flex;
   align-items: center;
+  display: flex;
   margin-left: 1rem;
 }
 
@@ -27,6 +27,6 @@
 
 .link {
   color: var(--white-color);
-  text-decoration: none;
   cursor: pointer;
+  text-decoration: none;
 }

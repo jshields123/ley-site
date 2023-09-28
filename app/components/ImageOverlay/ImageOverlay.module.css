@@ -1,21 +1,21 @@
 .container {
-  position: relative;
-  min-width: var(--mob-width);
   min-height: 100vh;
+  min-width: var(--mob-width);
   overflow: hidden;
+  position: relative;
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: var(--mob-width);
-  min-height: 100vh;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  min-height: 100vh;
+  min-width: var(--mob-width);
+  position: absolute;
+  top: 0;
   z-index: 1;
 }
 

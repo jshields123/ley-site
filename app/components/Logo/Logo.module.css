@@ -1,11 +1,11 @@
 .logo_wrapper {
-  display: flex;
   align-items: center;
+  display: flex;
   padding-left: 2rem;
 }
 
 .logo {
+  color: var(--white-color);
   font-size: 2rem;
   font-weight: 700;
-  color: var(--white-color);
 }

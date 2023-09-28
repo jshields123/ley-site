@@ -8,18 +8,17 @@
   }
 }
 
-
 .nav {
-  position: absolute;
-  top: 0;
   left: 0;
   min-height: 100vh;
-  z-index: 1;
+  position: absolute;
+  top: 0;
   width: var(--desk-width);
+  z-index: 1;
 }
 
 .button {
-  display: grid;
   align-items: center;
+  display: grid;
   justify-content: center;
 }

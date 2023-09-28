@@ -8,6 +8,6 @@
 
 .subtitle__container {
   display: grid;
-  place-items: center;
   justify-content: center;
+  place-items: center;
 }

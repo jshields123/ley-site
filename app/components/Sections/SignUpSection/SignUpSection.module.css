@@ -1,7 +1,7 @@
 .overlay {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .signup_container {

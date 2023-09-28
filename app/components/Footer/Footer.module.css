@@ -1,6 +1,6 @@
 .footer__text {
-  display: flex;
-  justify-content: center;
   background-color: black;
   color: var(--white-color);
+  display: flex;
+  justify-content: center;
 }
