@@ -19,7 +19,7 @@ const LowerNavbar = () => {
                     {Icon}
                   </button>
                 ) : (
-                  <a className={styles.link} href={linkHref} aria-aria-label={id}>
+                  <a className={styles.link} href={linkHref} aria-label={id}>
                     {Icon}
                   </a>
                 )}
