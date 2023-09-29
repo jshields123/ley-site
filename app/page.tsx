@@ -4,7 +4,7 @@ import './globals.css';
 import { Montserrat } from 'next/font/google';
 import Layout from './layout';
 import { Footer, ReferralsSection, SignUpSection, IntroSection, AboutSection } from './components';
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ServicesSection } from './components/Sections';
 
 const hind = Montserrat({
@@ -13,24 +13,33 @@ const hind = Montserrat({
 });
 
 export default function Home() {
+  const observer = useRef<IntersectionObserver | null>(null);
+  const [animatedElements, setAnimatedElements] = useState<Set<Element>>(new Set());
+
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
+    observer.current = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add(styles.show);
-        } else {
-          entry.target.classList.remove(styles.show);
+          if (!entry.target.classList.contains(styles.show) && !animatedElements.has(entry.target)) {
+            entry.target.classList.add(styles.show);
+            setAnimatedElements((prevSet) => new Set(prevSet.add(entry.target)));
+          }
         }
       });
     });
 
     const hiddenElements = document.querySelectorAll(`.${styles.hidden}`);
-    hiddenElements.forEach((element) => observer.observe(element));
+    hiddenElements.forEach((element) => {
+      observer.current!.observe(element);
+    });
 
     return () => {
-      observer.disconnect();
+      if (observer.current) {
+        observer.current.disconnect();
+      }
     };
-  }, []);
+  }, [animatedElements]);
+
   return (
     <>
       <Layout>
