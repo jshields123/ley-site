@@ -1,8 +1,8 @@
 .subtitle__text {
   color: var(--white-color);
-  font-size: 1.6rem;
-  font-weight: 500;
-  padding: 0 5rem;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  padding: 0 var(--padding-xxxl);
   text-align: center;
 }
 

@@ -11,22 +11,22 @@
 .logo {
   align-items: center;
   display: flex;
-  margin-left: 1rem;
+  margin-left: var(--padding-m);
 }
 
 .ul {
   display: flex;
   flex-direction: row;
   list-style: none;
-  padding: 1rem;
+  padding: var(--padding-m);
 }
 
 .li {
-  margin-left: 1rem;
+  margin-left: var(--padding-m);
 }
 
 .link {
   color: var(--white-color);
-  cursor: pointer;
   text-decoration: none;
+  cursor: pointer;
 }

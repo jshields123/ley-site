@@ -40,8 +40,8 @@
 }
 
 .another_random_lady {
-  border-radius: 8rem;
+  border-radius: var(--border-radius-xxxl);
 }
 .random_lady {
-  border-radius: 8rem;
+  border-radius: var(--border-radius-xxxl);
 }

@@ -6,6 +6,6 @@
 
 .title__text {
   color: var(--white-color);
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-bold);
 }

@@ -1,11 +1,11 @@
 .text__container {
-  padding: 1rem;
+  padding: var(--padding-m);
 }
 
 .text {
   color: var(--white-color);
-  font-size: 18px;
-  font-weight: 500;
-  padding: 2rem 2rem;
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-medium);
+  padding: var(--padding-xxl) var(--padding-xxl);
   text-align: center;
 }

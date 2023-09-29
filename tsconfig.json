@@ -34,14 +34,6 @@
       }
     ]
   },
-  "include": [
-    "next.config.js",
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "app/api/contact/route.ts",
-    "public/font_animation.js",
-    ".next/types/**/*.ts"
-  ],
+  "include": ["next.config.js", "next-env.d.ts", "**/*.ts", "**/*.tsx", "app/api/contact/route.ts", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

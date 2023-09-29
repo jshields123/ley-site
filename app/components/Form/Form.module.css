@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
-  padding: 1rem;
+  padding: var(--padding-m);
   text-align: center;
   width: 100%;
 }
@@ -17,18 +17,18 @@
   min-height: 1px;
   margin: -1px;
   overflow: hidden;
-  padding-top: 1rem;
+  padding-top: var(--padding-m);
   position: absolute;
   width: 1px;
 }
 .button_container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: var(--padding-m);
   width: 100%;
 }
 
 .form_button {
-  margin-top: 1rem;
+  margin-top: var(--padding-m);
   width: 100%;
 }

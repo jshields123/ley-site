@@ -8,10 +8,9 @@
 }
 
 .brands {
-  background-color: black;
-
+  background-color: var(--black-color);
   overflow: hidden;
-  padding: 2rem 0;
+  padding: var(--padding-xxl) 0;
   white-space: nowrap;
 }
 

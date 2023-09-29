@@ -1,7 +1,6 @@
 .nav {
   align-items: center;
   display: flex;
-  font-family: 'Montserrat', sans-serif;
   justify-content: space-between;
   min-height: 5rem;
   top: 0;
@@ -16,7 +15,7 @@
 }
 
 .li {
-  padding: 1rem;
+  padding: var(--padding-m);
 }
 
 .link {

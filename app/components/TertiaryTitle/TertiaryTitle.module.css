@@ -2,14 +2,14 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: var(--padding-m);
 }
 
 .tertiary_title {
   color: var(--white-color);
-  font-size: 0.7rem;
-  font-weight: 500;
-  line-height: 1.2;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-xs);
   text-align: center;
   text-transform: uppercase;
 }
