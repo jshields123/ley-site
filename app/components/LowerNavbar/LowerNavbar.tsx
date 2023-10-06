@@ -3,7 +3,7 @@ import { NAVBAR_ITEMS } from '../../utils/common/constants/Navbar.constants';
 
 const LowerNavbar = () => {
   return (
-    <div>
+    <>
       <nav className={styles.nav}>
         <ul className={styles.ul}>
           {NAVBAR_ITEMS.map(({ id, linkHref, Icon, onClick }) => {
@@ -28,7 +28,7 @@ const LowerNavbar = () => {
           })}
         </ul>
       </nav>
-    </div>
+    </>
   );
 };
 

@@ -1,24 +1,24 @@
 .nav {
-  align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   min-height: 5rem;
   top: 0;
-  z-index: 1;
+  z-index: 3;
 }
 
 .ul {
-  align-items: center;
   display: flex;
   flex-direction: row;
   list-style: none;
+  padding: 0;
 }
 
 .li {
-  padding: var(--padding-m);
+  padding: var(--padding-xxl);
 }
 
 .link {
   color: var(--white-color);
   text-decoration: none;
+  cursor: pointer;
 }

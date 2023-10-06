@@ -16,6 +16,7 @@ const Form = () => {
   const [email, setEmail] = useState<IContact['email']>('');
   const [error, setError] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
+  const [success, setSuccess] = useState<boolean>(false);
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -65,11 +66,12 @@ const Form = () => {
         setCompany('');
         setPhone('');
         setEmail('');
-        console.log('email sent');
+        setTimeout(() => {
+          setSuccess(false);
+        }, 2000);
       } else {
         const { msg } = await res.json();
         setError(msg);
-        console.log('error sending email');
       }
     } catch (error) {
       console.log(error);
@@ -109,8 +111,8 @@ const Form = () => {
         Submit
       </label>
       <div className={styles.button_container}>
-        <Button type={'submit'} isDisabled={false}>
-          {loading ? 'Loading...' : 'Submit'}
+        <Button type={'submit'} isDisabled={loading}>
+          {loading ? (success ? 'Sent!' : 'Loading...') : 'Submit'}
         </Button>
       </div>
     </form>
