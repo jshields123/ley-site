@@ -14,9 +14,13 @@ The site's design was created by myself on Figma. While I am not a web designer,
 
 Areas where the codebase could still benefit from improvement include consolidating and refactoring some of the components and cleaning up the styling. Basic tests for the API calls are in place, and I am also working on achieving test coverage for the components through unit testing.
 
-## Demo Video
+## Demo Video - Desktop
 
 https://github.com/jshields123/ley-site/assets/71281209/4f3c540c-a6b2-4c49-ae7e-b12ac86031c8
+
+## Demo Video - Mobile
+
+https://github.com/jshields123/ley-site/assets/71281209/9d8660de-32c3-4be4-bd3b-457efbdefe11
 
 ## Getting Started
 
