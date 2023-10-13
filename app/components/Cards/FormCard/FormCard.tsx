@@ -1,4 +1,3 @@
-import styles from './FormCard.module.css';
 import { Form } from '../../Form';
 import { Card } from '../Card';
 import { SubTitle } from '../../SubTitle';

@@ -81,7 +81,7 @@ const Form = () => {
   };
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={styles.form} role="form" onSubmit={handleSubmit}>
       <FormField
         label={'First Name*:'}
         id={'first'}

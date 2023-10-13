@@ -5,7 +5,7 @@ import { TextCardProps } from './TextCard.interfaces';
 const TextCard = ({ text }: TextCardProps) => {
   return (
     <Card>
-      <div className={styles.text__container}>
+      <div className={styles.container}>
         <p className={styles.text}>{text}</p>
       </div>
     </Card>
