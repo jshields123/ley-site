@@ -111,9 +111,7 @@ const Form = () => {
         Submit
       </label>
       <div className={styles.button_container}>
-        <Button type={'submit'} isDisabled={loading}>
-          {loading ? (success ? 'Sent!' : 'Loading...') : 'Submit'}
-        </Button>
+        <Button type={'submit'} isDisabled={loading} text={loading ? (success ? 'Sent!' : 'Loading...') : 'Submit'} title="submit" />
       </div>
     </form>
   );
