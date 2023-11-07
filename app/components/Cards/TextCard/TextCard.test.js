@@ -12,18 +12,18 @@ describe('TextCard', () => {
   it('renders a div element with the container class', () => {
     render(<TextCard text="This is some text." />);
 
-    expect(screen.getByRole('card')).toContainElement(screen.getByClassName('container'));
+    expect(screen.getByRole('card')).toContainElement(document.querySelector('.container'));
   });
 
   it('renders a p element with the text class', () => {
     render(<TextCard text="This is some text." />);
 
-    expect(screen.getByRole('card')).toContainElement(screen.getByClassName('text'));
+    expect(screen.getByRole('card')).toContainElement(document.querySelector('.text'));
   });
 
   it('renders the given text in the p element', () => {
     render(<TextCard text="This is some text." />);
 
-    expect(screen.getByClassName('text')).toHaveTextContent('This is some text.');
+    expect(document.querySelector('.text')).toHaveTextContent('This is some text.');
   });
 });
