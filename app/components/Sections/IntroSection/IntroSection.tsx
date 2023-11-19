@@ -29,9 +29,7 @@ const IntroSection = () => {
             <SubTitle text={'Empowering Professionals, Elevating Businesses'} />
             <TertiaryTitle text={'Sales & Career Coach | Author of #TalentBites | Delivering Short & Relevant Talent Insights'} />
             <div className={styles.button}>
-              <Button type={'button'} isDisabled={false} onClick={onClickToCall}>
-                {'Call now'}
-              </Button>
+              <Button type={'button'} isDisabled={false} onClick={onClickToCall} text={'Call now'} title={'Call now'} />
             </div>
           </div>
         </div>

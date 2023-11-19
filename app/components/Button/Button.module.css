@@ -12,7 +12,8 @@
   z-index: 3;
 }
 
-.button:hover {
+.button:hover,
+.button:focus {
   background-color: var(--white-color);
   color: var(--black-color);
 }
