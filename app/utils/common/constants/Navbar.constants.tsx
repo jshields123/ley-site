@@ -9,6 +9,6 @@ import { onClickToEmail } from '../functions/onClickToEmail';
 export const NAVBAR_ITEMS: NavbarItem[] = [
   { Icon: <PhoneIcon />, onClick: onClickToCall, id: 'phone' },
   { Icon: <EmailIcon />, onClick: onClickToEmail, id: 'email' },
-  { linkHref: '/instagram', Icon: <InstagramIcon />, id: 'instagram' },
+  { linkHref: 'https://www.instagram.com/leyconsulting', Icon: <InstagramIcon />, id: 'instagram' },
   { linkHref: 'https://www.linkedin.com/in/laureneyates/', Icon: <LinkedInIcon />, id: 'linkedIn' },
 ];

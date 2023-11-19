@@ -14,3 +14,10 @@
   border-radius: var(--border-radius-xxxl);
   padding: var(--padding-xxl) var(--padding-xxl);
 }
+
+.button_container {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--padding-m);
+  width: 100%;
+}

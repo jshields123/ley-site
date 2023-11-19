@@ -1,4 +1,6 @@
+import { Button } from '../../Button';
 import { TextCard } from '../../Cards';
+import { ABOUT_SECTION_TEXT } from './AboutSection.constants';
 import styles from './AboutSection.module.css';
 import Image from 'next/image';
 
@@ -7,14 +9,13 @@ const AboutSection = () => {
     <div className={styles.about_container}>
       <div className={styles.about_content}>
         <div className={styles.about_image}>
-          <Image className={styles.image} src={'/images/lauren-linkedin2.jpeg'} alt={'Lauren at work'} width={160} height={160} />
+          <Image className={styles.image} src={'/images/lauren-2.jpeg'} alt={'Lauren at work'} width={160} height={160} />
         </div>
         <div className={styles.about_text}>
-          <TextCard
-            text={
-              'Over 15 years experience working across the UK & Australia. I am a passionate relationship builder, recruiter, trainer and leader. My industry experience spans from global corporate, tech start-up to not-for-profit and healthcare; one thing remains consistent, my passion for people'
-            }
-          />
+          <TextCard text={ABOUT_SECTION_TEXT} />
+        </div>
+        <div className={styles.button_container}>
+          <Button children={'Subscribe'} type={'button'} isDisabled={false} />
         </div>
       </div>
     </div>

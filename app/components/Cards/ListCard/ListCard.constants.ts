@@ -3,55 +3,66 @@ export interface ListCardItem {
   explanation: string;
 }
 
-export const RECRUITMENT_LIST_ITEMS: ListCardItem[] = [
+export const SALES_COACHING_LIST_ITEMS: ListCardItem[] = [
   {
-    point: "Sales: ",
-    explanation: "Expert recruiters for revenue-driven sales professionals",
+    point: ' Individualised Coaching Sessions: ',
+    explanation: 'Tailored one-on-one sessions for sales skill enhancement.',
   },
   {
-    point: "Healthcare:",
-    explanation: "Specialized in recruiting top healthcare talent",
+    point: 'Sales Training Workshops:',
+    explanation: 'Customisable workshops covering fundamental techniques, objection handling, and closing strategies.',
   },
   {
-    point: "Medical Devices:",
-    explanation:
-      "Sourcing skilled professionals for innovation in medical devices",
+    point: 'Performance Analysis and Improvement:',
+    explanation: 'Regular assessment with personalized improvement plans.',
   },
   {
-    point: "Marketing:",
-    explanation: "Recruiting top talent for the marketing space",
+    point: 'Role-Play and Simulation:',
+    explanation: 'Practical exercises for real-world scenario readiness.',
   },
 ];
 
-export const TRAINING_LIST_ITEMS: ListCardItem[] = [
+export const CAREER_COACHING_LIST_ITEMS: ListCardItem[] = [
   {
-    point: "LinkedIn Training:",
-    explanation:
-      "Enhance your professional networking and personal branding skills.",
+    point: 'Goal-oriented Career Exploration:',
+    explanation: 'Identifying goals and potential paths.',
   },
   {
-    point: "Sales Training:",
-    explanation:
-      "Equip your sales team with effective selling techniques and strategies.",
+    point: 'Resume and LinkedIn Optimisation:',
+    explanation: 'Crafting compelling profiles for effective networking.',
   },
   {
-    point: "Recruitment Training:",
-    explanation:
-      "Improve your recruitment skills to identify and hire top talent.",
+    point: 'Mock Interviews and Prep:',
+    explanation: 'Simulated interviews with constructive feedback.',
+  },
+  {
+    point: 'Networking Strategies:',
+    explanation: 'Building and maintaining professional connections.',
+  },
+  {
+    point: 'Job Search Strategy:',
+    explanation: 'Tailored plans for effective job searching and negotiation.',
   },
 ];
-export const CONSULTING_LIST_ITEMS: ListCardItem[] = [
+export const BUSINESS_CONSULTING_LIST_ITEMS: ListCardItem[] = [
   {
-    point: "Consulting on Recruitment Strategy:",
-    explanation:
-      "Develop effective recruitment strategies to attract top talent.",
+    point: 'LinkedIn Strategy and Optimisation:',
+    explanation: 'Enhancing professional branding and networking.',
   },
   {
-    point: "Personal Branding Consulting:",
-    explanation: "Build a strong personal brand to stand out in your industry.",
+    point: 'Internal Mobility Programs:',
+    explanation: 'Facilitating growth opportunities within the organization.',
   },
   {
-    point: "Sales Strategy Consulting:",
-    explanation: "Optimize your sales processes and boost revenue growth.",
+    point: 'Sales Team Effectiveness Assessment:',
+    explanation: 'Analysing and optimising sales operations.',
+  },
+  {
+    point: 'LinkedIn Training for Sales Teams:',
+    explanation: 'Empowering teams for strategic platform use.',
+  },
+  {
+    point: 'Leadership Development for Sales Managers:',
+    explanation: 'Specialised coaching for effective leadership.',
   },
 ];

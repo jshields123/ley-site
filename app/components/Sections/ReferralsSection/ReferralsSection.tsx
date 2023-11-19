@@ -9,7 +9,11 @@ const ReferralsSection = () => {
       <div className={styles.referral_content}>
         <div className={styles.referral_single}>
           <div className={styles.text}>
-            <TextCard text={'“Lauren is great and is a true expert in her field, she helped me get a job! Life Changer!”'} />
+            <TextCard
+              text={
+                '"Thanks to Lauren, I transitioned seamlessly from redundancy to the role of Head of TA. Their expert guidance and strategic approach made all the difference. Grateful for a career coach who turns challenges into opportunities!"'
+              }
+            />
           </div>
           <div className={styles.image}>
             <Image
@@ -25,7 +29,7 @@ const ReferralsSection = () => {
           <div className={styles.text}>
             <TextCard
               text={
-                '“Lauren has helped us multiple times to fill positions and always does with exceptional service and delivers results!”'
+                '"Working with Lauren was a career-changing experience. From being a low performer in sales, Lauren\'s personalised coaching and strategic insights turned things around for me. With her guidance, I not only improved my sales performance but clinched the title of Top Biller of the Quarter."'
               }
             />
           </div>
