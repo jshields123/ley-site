@@ -9,7 +9,7 @@ export async function POST(req: any) {
   console.log(email, 'email');
   try {
     const data = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
+      from: 'LEY <hello@leyconsulting.com.au>',
       bcc: [`${process.env.LAURENS_EMAIL}`],
       to: [`${email}`],
       subject: 'Thanks for contacting LEY',

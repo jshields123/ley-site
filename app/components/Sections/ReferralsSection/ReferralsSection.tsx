@@ -11,18 +11,12 @@ const ReferralsSection = () => {
           <div className={styles.text}>
             <TextCard
               text={
-                '"Thanks to Lauren, I transitioned seamlessly from redundancy to the role of Head of TA. Their expert guidance and strategic approach made all the difference. Grateful for a career coach who turns challenges into opportunities!"'
+                '"Thanks to Lauren, I transitioned seamlessly from redundancy to the role of Head of TA. Her expert guidance and strategic approach made all the difference. Truly grateful for a career coach who turns challenges into opportunities!"'
               }
             />
           </div>
           <div className={styles.image}>
-            <Image
-              className={styles.another_random_lady}
-              src={'/images/another_random.jpeg'}
-              alt={'random lady'}
-              width={140}
-              height={140}
-            />
+            <Image className={styles.cass} src={'/images/cass_bw_2.jpeg'} alt={'cass'} width={140} height={140} />
           </div>
         </div>
         <div className={styles.referral_single}>
@@ -34,11 +28,10 @@ const ReferralsSection = () => {
             />
           </div>
           <div className={styles.text}>
-            <Image className={styles.random_lady} src={'/images/random_lady.jpeg'} alt={'random lady'} width={140} height={140} />
+            <Image className={styles.jordan} src={'/images/jord_bw_2.jpeg'} alt={'jordan'} width={140} height={140} />
           </div>
         </div>
       </div>
-      <Carousel />
     </div>
   );
 };

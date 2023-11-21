@@ -7,7 +7,7 @@ const auth = new GoogleAuth({
   keyFile: process.env.GOOGLE_APPLICATION_CREDENTIALS,
   scopes: 'https://www.googleapis.com/auth/spreadsheets',
 });
-const doc = new GoogleSpreadsheet('11BGL3T6sqrvtUdNKveqI-KnGE59N3QYkpJ2Ht5CHWd4', auth);
+const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID!, auth);
 
 export async function POST(request: Request) {
   const { firstName, lastName, company, phone, email, id } = await request.json();

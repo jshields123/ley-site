@@ -14,7 +14,7 @@ const LowerNavbar = () => {
                     className={styles.link}
                     onClick={onClick}
                     style={{ border: 'none', background: 'none', padding: 0 }}
-                    aria-name={id}
+                    aria-label={id}
                   >
                     {Icon}
                   </button>

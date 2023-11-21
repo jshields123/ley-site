@@ -1,5 +1,5 @@
 .container {
-  padding: var(--padding-m);
+  padding: var(--padding-s);
 }
 
 .text {
@@ -8,4 +8,10 @@
   font-weight: var(--font-weight-medium);
   padding: var(--padding-xxl) var(--padding-xxl);
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .text {
+    text-align: left;
+  }
 }
