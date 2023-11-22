@@ -8,7 +8,7 @@ export interface NavbarItem {
 }
 
 export interface IContact {
-  id: number;
+  id: string;
   firstName: string;
   lastName: string;
   email: string;
