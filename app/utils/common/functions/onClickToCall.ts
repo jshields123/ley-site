@@ -1,3 +1,3 @@
 export const onClickToCall = () => {
-  window.open(`tel:${process.env.NEXT_PUBLIC_LAURENS_PHONE_NUMBER}`);
+  window.location.href = `tel:${process.env.NEXT_PUBLIC_LAURENS_PHONE_NUMBER}`;
 };

@@ -2,6 +2,7 @@
 
 import { FormField } from '../FormField';
 import { IContact } from '../../interfaces/common';
+import toast, { Toaster } from 'react-hot-toast';
 
 import styles from './Form.module.css';
 import { FormEvent, useState } from 'react';
@@ -41,7 +42,6 @@ const Form = () => {
       console.log(contact);
       if (res.ok) {
         const data = await res.json();
-        alert('Details sent successfully');
       } else {
         const { msg } = await res.json();
         console.log('error adding contact', msg);
@@ -75,8 +75,10 @@ const Form = () => {
       }
     } catch (error) {
       console.log(error);
+      toast('Error', { position: 'bottom-center' });
     } finally {
       setLoading(false);
+      toast('Details sent successfully', { position: 'bottom-center' });
     }
   };
 
@@ -113,6 +115,7 @@ const Form = () => {
       <div className={styles.button_container}>
         <Button type={'submit'} isDisabled={loading} text={loading ? (success ? 'Sent!' : 'Loading...') : 'Submit'} title="submit" />
       </div>
+      <Toaster position={'bottom-center'} />
     </form>
   );
 };
