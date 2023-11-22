@@ -10,11 +10,11 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <html lang="en" className={styles.html}>
-      <title>LEY Consulting - Recruitment, Sales and HR Specialist</title>
+      <title>LEY Consulting - Sales & Career Coach, Tailored Solutions</title>
       <Head>
         <meta
           name="description"
-          content="Empowering Professionals, Elevating Businesses | Your trusted partner for recruitment services, sales consulting and HR software consulting"
+          content="Empowering Professionals, Elevating Businesses | Sales & Career Coach | Author of #TalentBites | Tailored Solutions"
           key={'description'}
         />
       </Head>

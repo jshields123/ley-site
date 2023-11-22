@@ -1,4 +1,3 @@
-import { Carousel } from '../../Carousel';
 import styles from '../ReferralsSection/ReferralsSection.module.css';
 import { TextCard } from '../../Cards';
 import Image from 'next/image';
