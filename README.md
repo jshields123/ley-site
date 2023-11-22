@@ -38,4 +38,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deployed on Vercel
 
-This application has been deployed on vercel and the live version can be accessed at https://ley-site.vercel.app/.
+This application has been deployed on vercel and the live version can be accessed at [https://www.leyconsulting.com.au ](https://www.leyconsulting.com.au/)https://www.leyconsulting.com.au/.
