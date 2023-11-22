@@ -12,9 +12,11 @@ const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID!, auth);
 export async function POST(request: Request) {
   const { firstName, lastName, company, phone, email, id } = await request.json();
 
-  if (!firstName || !lastName || !company || !phone || !email) {
+  if (!firstName || !lastName || !phone || !email) {
     return NextResponse.json({ error: 'All fields are required' });
   }
+
+  const companyValue = company || 'N/A';
 
   try {
     await doc.loadInfo();
@@ -26,7 +28,7 @@ export async function POST(request: Request) {
       last_name: lastName,
       phone: phone,
       email: email,
-      company: company,
+      company: companyValue,
       created_at: new Date(),
     });
 
