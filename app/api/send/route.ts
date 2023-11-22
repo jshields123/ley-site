@@ -10,7 +10,7 @@ export async function POST(req: any) {
   try {
     const data = await resend.emails.send({
       from: 'LEY <hello@leyconsulting.com.au>',
-      bcc: [`${process.env.LAURENS_EMAIL}`],
+      bcc: [`${process.env.NEXT_PUBLIC_LAURENS_EMAIL}`],
       to: [`${email}`],
       subject: 'Thanks for contacting LEY',
       react: EmailTemplate({ firstName, lastName, company, phone }),
