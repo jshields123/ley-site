@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 import styles from './layout.module.css';
 import Head from 'next/head';
@@ -18,7 +19,10 @@ const Layout = ({ children }: LayoutProps) => {
           key={'description'}
         />
       </Head>
-      <body className={styles.layout}>{children}</body>
+      <body className={styles.layout}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 };
