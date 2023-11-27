@@ -36,6 +36,10 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+UPDATE:
+
+This has now been converted to a live production site as the business is now functioning. The google sheet api was removed and replaced by vercel's postgres storage facility for better security of user data.
+
 ## Deployed on Vercel
 
 This application has been deployed on vercel and the live version can be accessed at [https://www.leyconsulting.com.au ](https://www.leyconsulting.com.au/)https://www.leyconsulting.com.au/.
