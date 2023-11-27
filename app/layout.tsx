@@ -15,7 +15,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Head>
         <meta
           name="description"
-          content="Empowering Professionals, Elevating Businesses | Sales & Career Coach | Author of TalentBites | Tailored Solutions"
+          content="Empowering Professionals, Elevating Businesses | Sales & Career Coach | Author of Talent Bites | Tailored Solutions"
           key={'description'}
         />
       </Head>
