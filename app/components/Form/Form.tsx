@@ -9,7 +9,6 @@ import { FormEvent, useState } from 'react';
 import { Button } from '../Button/Button';
 
 const Form = () => {
-  const id = Math.floor(Math.random() * 1000000000);
   const [firstName, setFirstName] = useState<IContact['firstName']>('');
   const [lastName, setLastName] = useState<IContact['lastName']>('');
   const [company, setCompany] = useState<IContact['company']>('');
@@ -24,7 +23,6 @@ const Form = () => {
     setLoading(true);
 
     const contact: IContact = {
-      id,
       firstName,
       lastName,
       email,
