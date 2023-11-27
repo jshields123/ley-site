@@ -27,7 +27,7 @@ const IntroSection = () => {
           <div className={styles.intro_text}>
             <Title text={'LEY Consulting'} />
             <SubTitle text={'Empowering Professionals, Elevating Businesses'} />
-            <TertiaryTitle text={'Sales & Career Coach | Author of #TalentBites | Tailored Solutions'} />
+            <TertiaryTitle text={'Sales & Career Coach | Author of Talent Bites | Tailored Solutions'} />
             <div className={styles.button}>
               <Button
                 type={'button'}

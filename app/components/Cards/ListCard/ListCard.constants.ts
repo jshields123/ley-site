@@ -14,7 +14,7 @@ export const SALES_COACHING_LIST_ITEMS: ListCardItem[] = [
   },
   {
     point: 'Performance Analysis and Improvement:',
-    explanation: 'Regular assessment with personalized improvement plans.',
+    explanation: 'Regular assessment with personalised improvement plans.',
   },
   {
     point: 'Role-Play and Simulation:',
@@ -51,7 +51,7 @@ export const BUSINESS_CONSULTING_LIST_ITEMS: ListCardItem[] = [
   },
   {
     point: 'Internal Mobility Programs:',
-    explanation: 'Facilitating growth opportunities within the organization.',
+    explanation: 'Facilitating growth opportunities within the organisation.',
   },
   {
     point: 'Sales Team Effectiveness Assessment:',

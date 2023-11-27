@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 
 import styles from './layout.module.css';
 import Head from 'next/head';
@@ -14,11 +15,14 @@ const Layout = ({ children }: LayoutProps) => {
       <Head>
         <meta
           name="description"
-          content="Empowering Professionals, Elevating Businesses | Sales & Career Coach | Author of #TalentBites | Tailored Solutions"
+          content="Empowering Professionals, Elevating Businesses | Sales & Career Coach | Author of Talent Bites | Tailored Solutions"
           key={'description'}
         />
       </Head>
-      <body className={styles.layout}>{children}</body>
+      <body className={styles.layout}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 };
