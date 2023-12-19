@@ -7,6 +7,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import styles from './Form.module.css';
 import { FormEvent, useState } from 'react';
 import { Button } from '../Button/Button';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Form = () => {
   const [firstName, setFirstName] = useState<IContact['firstName']>('');
@@ -110,6 +111,9 @@ const Form = () => {
       <label className={styles.button_label} htmlFor="submit">
         Submit
       </label>
+      <div className={styles.recaptcha}>
+        <ReCAPTCHA sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!} />
+      </div>
       <div className={styles.button_container}>
         <Button type={'submit'} isDisabled={loading} text={loading ? (success ? 'Sent!' : 'Loading...') : 'Submit'} title="submit" />
       </div>

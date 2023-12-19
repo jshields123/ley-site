@@ -13,6 +13,7 @@
     "@types/node": "20.3.1",
     "@types/react": "18.2.12",
     "@types/react-dom": "18.2.5",
+    "@types/react-google-recaptcha": "^2.1.8",
     "@vercel/analytics": "^1.1.1",
     "@vercel/postgres": "^0.5.1",
     "google-auth-library": "^8.9.0",
@@ -22,6 +23,7 @@
     "prettier": "^3.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-google-recaptcha": "^3.1.0",
     "react-hot-toast": "^2.4.1",
     "resend": "^1.0.0",
     "typescript": "5.1.3"

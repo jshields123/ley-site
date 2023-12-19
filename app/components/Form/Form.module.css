@@ -32,3 +32,10 @@
   margin-top: var(--padding-m);
   width: 100%;
 }
+
+.recaptcha {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--padding-m);
+  width: 102%;
+}
