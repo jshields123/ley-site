@@ -1,11 +1,10 @@
-interface EmailTemplateProps {
+export interface EmailTemplateProps {
   firstName: string;
   lastName: string;
-  company: string;
   phone: string;
 }
 
-const EmailTemplate = ({ firstName, lastName, company, phone }: EmailTemplateProps) => (
+const EmailTemplate = ({ firstName, lastName, phone }: EmailTemplateProps) => (
   <div>
     <h1>
       Welcome, {firstName} {lastName}!
